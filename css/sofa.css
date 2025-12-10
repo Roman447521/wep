@@ -1,0 +1,664 @@
+/* ======================================== */
+/* === ЗАГАЛЬНІ СТИЛІ ТА ІМПОРТ ШРИФТІВ === */
+/* ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Скидання стилів браузера за замовчуванням */
+* {
+    margin: 0; /* Прибирає зовнішні відступи для всіх елементів */
+    padding: 0; /* Прибирає внутрішні відступи для всіх елементів */
+    box-sizing: border-box; /* Змінює модель розрахунку розмірів блоків, включаючи padding і border в ширину/висоту */
+}
+
+/* Базові стилі для всього документа */
+body {
+    font-family: 'Poppins', sans-serif; /* Встановлює основний шрифт для всього сайту */
+    color: #333; /* Встановлює основний колір тексту */
+    background-color: #f8f9fa; /* Встановлює світлий фоновий колір */
+}
+
+/* Стилі для контейнера, що обмежує ширину контенту та центрує його */
+.container {
+    max-width: 1200px; /* Максимальна ширина контейнера */
+    margin: 0 auto; /* Центрує контейнер по горизонталі */
+    padding: 0 20px; /* Внутрішні відступи зліва і справа для мобільних пристроїв */
+}
+
+/* Стилі для посилань */
+a {
+    text-decoration: none; /* Прибирає підкреслення у посилань */
+    color: inherit; /* Посилання успадковують колір тексту від батьківського елемента */
+}
+
+/* Стилі для списків */
+ul {
+    list-style-type: none; /* Прибирає маркери у списків */
+}
+
+
+
+
+/* =============================================================== */
+/* ================= СТИЛІ ДЛЯ HEADER (ШАПКИ САЙТУ) ============== */
+/* =============================================================== */
+
+.header {
+    background-color: transparent; /* Робить фон шапки прозорим */
+    padding: 20px 0; /* Внутрішні відступи зверху та знизу */
+    position: absolute; /* Абсолютне позиціонування, щоб шапка була поверх hero секції */
+    width: 100%; /* Шапка займає всю ширину екрану */
+    top: 0; /* Розташування зверху */
+    left: 0; /* Розташування зліва */
+    z-index: 100; /* Встановлює високий z-index, щоб шапка була над іншими елементами */
+}
+
+/* Стилі для навігації */
+.main-nav {
+    display: flex; /* Використовує Flexbox для вирівнювання елементів */
+    justify-content: space-between; /* Розподіляє елементи по краях (лого зліва, меню і іконки справа) */
+    align-items: center; /* Вирівнює елементи по вертикальному центру */
+}
+
+/* Стилі для логотипу */
+.logo {
+    font-size: 24px; /* Розмір шрифту логотипу */
+    font-weight: 700; /* Жирність шрифту */
+    color: #fff; /* Колір тексту логотипу (білий для контрасту з фоном) */
+}
+
+/* Стилі для списку навігації */
+.main-nav ul {
+    display: flex; /* Елементи списку (пункти меню) розташовуються в рядок */
+    gap: 30px; /* Відстань між пунктами меню */
+}
+
+.main-nav ul li a {
+    color: #fff; /* Колір тексту посилань */
+    font-weight: 500; /* Напівжирний шрифт */
+    transition: color 0.3s ease; /* Плавний перехід кольору при наведенні */
+}
+
+.main-nav ul li a:hover {
+    color: #f39c12; /* Колір тексту при наведенні курсору */
+}
+
+/* Стилі для іконок в навігації */
+.nav-icons {
+    display: flex; /* Іконки розташовуються в рядок */
+    gap: 20px; /* Відстань між іконками */
+}
+
+.nav-icons a {
+    color: #fff; /* Колір іконок */
+    font-size: 18px; /* Розмір іконок */
+}
+
+/* Стилі для випадаючого списку <select> в навігації =========================================== хз чи залишати */
+:root {
+    --accent-color: #f39c12;
+  }
+  
+  .dropdown {
+    position: relative; /* Необхідно, щоб .dropdown-content позиціонувався відносно кнопки */
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: #e67e22; 
+    color: #fff; 
+    font-size: 16px;
+    padding: 5px 25px; 
+    border-radius: 20px; 
+    font-weight: 600; 
+    transition: background-color 0.3s ease; 
+    border: none; 
+    cursor: pointer;   
+  }
+  
+  .dropdown-content {
+    text-align: center;
+    display: none; /* Сховано за замовчуванням */
+    position: absolute;
+    z-index: 1; /* Має бути поверх іншого контенту */
+    min-width: 100px;
+    background-color: rgba(30, 30, 30, 0.9);
+  }
+  
+
+  .dropdown-content a {
+    color: white; /* Текст посилань залишається білим і чітким */
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 10px; 
+    display: block; /* Робить посилання на всю ширину */
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(243, 156, 18, 0.5); /* Ваш напівпрозорий помаранчевий акцент */
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block; /* Показуємо меню */
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #e08e0b; /* Трохи темніший акцент */
+  }
+
+
+
+
+/* ====================================================================== */
+/* ============= СТИЛІ ДЛЯ HERO SECTION (ГОЛОВНОЇ СЕКЦІЇ) =============== */
+/* ====================================================================== */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('../images/1441.png'); /* Фонове зображення з затемненням */
+    height: 150vh; /* Висота секції на весь екран */
+    background-size: cover; /* Зображення покриває всю доступну площу */
+    background-position: center; /* Центрує фонове зображення */
+    display: flex; /* Використовує Flexbox */
+    align-items: left; /* Вирівнює контент по вертикальному  */
+    text-align: center; /* Центрує текст */
+}
+
+.hero-content {
+    color: #fff; /* Колір тексту в секції */
+    max-width: 600px; /* Максимальна ширина текстового блоку */
+    margin: 0 auto; /* Центрування блоку */
+}
+
+.hero-content h1 {
+    font-size: 48px; /* Розмір головного заголовка */
+    margin-bottom: 20px; /* Відступ знизу */
+    margin-top: 300px; /* Відступ зверху */
+}
+
+.hero-content p {
+    font-size: 18px; /* Розмір тексту параграфа */
+    margin-bottom: 20px; /* Відступ знизу */
+}
+
+
+.btn {
+    background-color: #e67e22; /* Колір фону кнопки */
+    color: #fff; /* Колір тексту кнопки */
+    padding: 15px 30px; /* Внутрішні відступи кнопки */
+    border-radius: 30px; /* Закруглення кутів */
+    font-weight: 600; /* Жирність шрифту */
+    transition: background-color 0.3s ease; /* Плавний перехід кольору фону */
+    
+}
+.btn:hover {
+    background-color: #d35400; /* Колір фону при наведенні */
+}
+
+/* ============================================================ */
+/* ================= СТИЛІ ДЛЯ HEADER (Твій код) ============== */
+/* ============================================================ */
+.header {
+    background-color: transparent;
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #f39c12;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-icons a {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Стилі для випадаючого списку (Твій код) */
+:root {
+    --accent-color: #f39c12;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    background-color: #e67e22; 
+    color: #fff; 
+    font-size: 16px;
+    padding: 5px 25px; 
+    border-radius: 20px; 
+    font-weight: 600; 
+    transition: background-color 0.3s ease; 
+    border: none; 
+    cursor: pointer;   
+}
+.dropdown-content {
+    text-align: center;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    min-width: 100px;
+    background-color: rgba(30, 30, 30, 0.9);
+}
+.dropdown-content a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 10px; 
+    display: block;
+    transition: background-color 0.3s ease;
+}
+.dropdown-content a:hover {
+    background-color: rgba(243, 156, 18, 0.5);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #e08e0b;
+}
+
+/* ==================================================== */
+/* ============= СТИЛІ ДЛЯ HERO SECTION =============== */
+/* ==================================================== */
+
+.hero {
+    /* Зображення з твого CSS, шлях 'images/1441.png' має бути правильним */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('../images/1441.png');
+    height: 150vh; 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: left;
+    text-align: center;
+}
+
+.hero-content {
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    margin-top: 300px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #d35400;
+}
+
+
+/* ================================================== */
+/* == СТИЛІ ДЛЯ СТОРІНКИ МАГАЗИНУ (ФІЛЬТРИ + СІТКА) == */
+/* ================================================== */
+
+/* Обгортка для секції магазину (фільтри + сітка) */
+.shop-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #ffffff; /* Білий фон для цієї секції */
+}
+
+/* Заголовок сторінки (напр. "Крісла мішки") */
+.page-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Двоколонковий макет: Фільтри | Контент */
+.shop-layout {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start; /* Вирівнює верхні частини */
+}
+
+/* =================================== */
+/* ====== СТИЛІ ПАНЕЛІ ФІЛЬТРІВ ====== */
+/* =================================== */
+
+.filters-sidebar {
+    /* Ширина: 280px, не росте, не стискається */
+    flex: 0 0 280px; 
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Кнопка "Сховати фільтр" */
+.hide-filter-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+}
+
+/* Група фільтрів (напр. "Типи", "Ціна") */
+.filter-group {
+    padding: 20px;
+    border-bottom: 1px solid #EBEBEB;
+}
+.filter-group:last-child {
+    border-bottom: none;
+}
+
+/* Заголовок групи фільтрів */
+.filter-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    cursor: pointer;
+}
+
+.filter-title i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+/* Список чекбоксів */
+.filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 250px; /* Обмеження висоти для довгого списку */
+    overflow-y: auto; /* Додає прокрутку */
+}
+
+.filter-list li {
+    margin-bottom: 12px;
+}
+.filter-list li:last-child {
+    margin-bottom: 0;
+}
+
+.filter-list input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    accent-color: #e67e22; /* Твій колір */
+}
+
+.filter-list label {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.filter-list .count {
+    color: #888;
+    font-size: 13px;
+}
+
+/* Фільтр ціни */
+.price-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #888;
+}
+
+.price-inputs input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.price-submit-btn {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.price-submit-btn:hover {
+    background: #e67e22;
+    color: #fff;
+    border-color: #e67e22;
+}
+
+
+/* =================================== */
+/* ====== СТИЛІ ОСНОВНОГО КОНТЕНТУ ===== */
+/* =================================== */
+
+.main-content {
+    flex: 1; /* Займає весь залишок місця */
+    min-width: 0; 
+}
+
+
+/* ================================================== */
+/* ====== СТИЛІ ДЛЯ СІТКИ ТОВАРІВ (КАРТКИ) ====== */
+/* ================================================== */
+
+/* Скидаємо відступи, бо вони тепер у .shop-container */
+.product-grid {
+    padding: 0; 
+}
+
+.grid-container {
+    display: grid;
+    /* Налаштовуємо на 3 колонки, оскільки 4-та - фільтр */
+    /* Але ні, фільтр поза сіткою. Повертаємо 4 */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+}
+
+/* Якщо фільтр *всередині* main-content, то треба 3. 
+   Але у нас макет .shop-layout, тому .main-content звужується.
+   Давай зробимо сітку АДАПТИВНОЮ до ширини .main-content */
+.grid-container {
+    display: grid;
+    /* Використовуємо auto-fit для адаптивності */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+
+.product-card {
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+.product-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.product-image {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    background-color: #FAFAFA;
+}
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+.product-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.icon-btn {
+    background-color: #fff;
+    border: 1px solid #EBEBEB;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.icon-btn:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.product-info {
+    padding: 16px;
+    flex-grow: 1;
+}
+.product-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: -webkit-box; 
+    /* -webkit-line-clamp: 2; */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 45px;
+}
+.product-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 12px;
+}
+.product-meta .fa-star {
+    color: #f39c12;
+}
+.product-status {
+    color: #e67e22;
+    font-weight: 500;
+}
+
+.product-colors {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+.color-swatch {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: inline-block;
+}
+.color-more {
+    font-size: 12px;
+    color: #777;
+    margin-left: 5px;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-top: 1px solid #EBEBEB;
+}
+.product-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+.cart-btn {
+    background-color: #F6F6F6;
+    border: 1px solid #EBEBEB;
+    color: #333;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.cart-btn:hover {
+    background-color: #e67e22;
+    color: #fff;
+    border-color: #e67e22;
+}
+
+

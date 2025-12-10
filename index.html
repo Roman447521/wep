@@ -1,0 +1,398 @@
+<!DOCTYPE html> <!-- Вказує браузеру, що це HTML5 документ -->
+<html lang="uk"> <!-- Мова сторінки — українська -->
+<head>
+    <meta charset="UTF-8"> <!-- Підтримка українських символів -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптивність для мобільних пристроїв -->
+    <title>Furni - Minimalistic & Modern</title> <!-- Назва сайту, що відображається на вкладці браузера -->
+    <link rel="stylesheet" href="css/index.css"> <!-- Підключення CSS-файлу для стилів -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Іконки Font Awesome -->
+    <link rel="icon" type="image/x-icon" href="ico/favicon.ico"> <!-- Іконка сайту на вкладці браузера -->
+</head>
+
+<body> <!-- Основна частина сторінки -->
+
+    <!-- ====== ШАПКА САЙТУ ====== -->
+    <header class="header"> <!-- Тег для верхньої частини сайту -->
+        <div class="container"> <!-- Обгортка для вирівнювання контенту -->
+            <nav class="main-nav"> <!-- Головне меню навігації -->
+                <a href="#" class="logo">Furni.</a> <!-- Логотип сайту -->
+                <ul> <!-- Список навігаційних посилань -->
+                    <li><a href="index.html">Home</a></li> <!-- Посилання на головну -->
+                    <li><a href="about us.html">About Us</a></li> <!-- Про нас -->
+                    <li><a href="services.html">Services</a></li> <!-- Послуги -->
+                    <div class="dropdown"> <!-- Випадаюче меню для мобільної версії -->
+                        <button class="dropbtn">Furniture</button> 
+                        <div class="dropdown-content">
+                          <a href="sofa.html">Sofa</a>
+                          <a href="#">Bed</a>
+                          <a href="#">Chair</a>
+                          <a href="#">Wardrobe</a>
+                          <a href="#">Bookshelf</a>
+                          <a href="ottoman.html">Ottoman</a>
+                          <a href="#">Dresser</a>
+                          <a href="#">Nightstand</a>
+                        </div>
+                      </div>
+                </ul>
+                <div class="nav-icons"> <!-- Блок іконок справа у меню -->
+                    <a href="#"><i class="fas fa-user"></i></a> <!-- Іконка користувача -->
+                    <a href="#"><i class="fas fa-shopping-cart"></i></a> <!-- Іконка кошика -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main> <!-- Основна частина сайту -->
+
+        <!-- ====== ГОЛОВНИЙ БАНЕР (Hero) ====== -->
+        <section class="hero"> <!-- Великий банер із заголовком -->
+            <div class="container">
+                <div class="hero-content"> <!-- Текст у банері -->
+                    <h1>Make Your Interior More<br>Minimalistic & Modern</h1> <!-- Головний заголовок -->
+                    <p>Turn your room into a lot more minimal and modern with ease and speed</p> <!-- Підзаголовок -->
+                    <a href="#" class="btn">Shop Now</a> <!-- Кнопка "Shop Now" --> 
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== ПЕРЕВАГИ ====== -->
+        <section class="features">
+            <div class="container">
+                <div class="features-header">
+                    <h2>Why Choosing Us</h2> <!-- Заголовок секції -->
+                </div>
+                <div class="features-grid"> <!-- Сітка із 3 блоків переваг -->
+                    <div class="feature-item">
+                        <h3>Luxury facilities</h3> <!-- Назва першої переваги -->
+                        <p>The advantage of hiring a workspace with us is that givees you comfortable service.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Affordable Price</h3> <!-- Назва другої переваги -->
+                        <p>You can get a workspace of the highest quality at an affordable price and still enjoy the facilities.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Many Choices</h3> <!-- Назва третьої переваги -->
+                        <p>We provide many unique work space choices so that you can choose the workspace to your liking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== КАТАЛОГ ТОВАРІВ ====== -->
+        <section class="best-selling">
+            <div class="container">
+                <h2>Best Selling Product</h2> <!-- Заголовок секції -->
+                <div class="product-tabs"> <!-- Кнопки для вибору категорій товарів -->
+                    <button class="tab-btn active" onclick="openTab(event, 'chair-content')">Chair</button>
+                    <button class="tab-btn" onclick="openTab(event, 'beds-content')">Beds</button>
+                    <button class="tab-btn" onclick="openTab(event, 'sofa-content')">Sofa</button>
+                    <button class="tab-btn" onclick="openTab(event, 'lamp-content')">Lamp</button>
+                </div>
+
+                <div id="chair-content" class="tab-content active"> <!-- Вміст для категорії "Chair" -->
+                    <div class="product-grid"> <!-- Сітка товарів -->
+                        <!-- перший товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/крісло 1.png" alt="Curtain Arm Chair">  <!-- Зображення товару -->
+                            </div> 
+                            <h3>Curtain Arm Chair</h3> <!-- Назва товару -->
+                            <p class="price">$ 120</p> <!-- Ціна товару -->
+                            <a href="#" class="add-to-cart">+</a> <!-- Кнопка додавання в кошик -->
+                        </div>
+                        <!-- другий товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/крісло 3.png" alt="Concept Chair">
+                            </div>
+                            <h3>Concept Chair</h3>
+                            <p class="price">$ 180</p>
+                            <a href="#" class="add-to-cart">+</a>
+                        </div>
+                        <!-- третій товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/крісло 2.png" alt="Aulis Chair">
+                            </div>
+                            <h3>Aulis Chair</h3>
+                            <p class="price">$ 200</p>
+                            <a href="#" class="add-to-cart">+</a>
+                        </div>
+                        <!-- четвертий товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/крісло 4.png" alt="Armchair Patch">
+                            </div>
+                            <h3>Armchair Patch</h3>
+                            <p class="price">$ 150</p>
+                            <a href="#" class="add-to-cart">+</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div id="beds-content" class="tab-content"> 
+                    <p style="text-align: center; padding: 40px; font-size: 18px; color: #666;">Товари категорії "Beds" будуть тут.</p>
+                </div>
+
+                <div id="sofa-content" class="tab-content"> 
+                    <p style="text-align: center; padding: 40px; font-size: 18px; color: #666;">Товари категорії "Sofa" будуть тут.</p>
+                </div>
+
+                <div id="lamp-content" class="tab-content"> 
+                    <p style="text-align: center; padding: 40px; font-size: 18px; color: #666;">Товари категорії "Lamp" будуть тут.</p>
+                </div>
+
+                 <a href="#" class="view-all">View All &rarr;</a> </div>
+            
+        </section>
+
+        <!-- ====== ДОСВІД ТА ЯКІСТЬ ====== -->
+        <section class="experience">
+            <div class="container">
+                <div class="experience-content">
+                    <div class="experience-image">
+                        <img src="images/диван.png" alt="Modern interior"> 
+                    </div>
+                    <div class="experience-text">
+                        <p class="subtitle">EXPERIENCE</p>
+                        <h2>We Provide You The Best Experience</h2> 
+                        <p>You don’t have to worry about the result because all of our interiors are made by professionals...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== ВИРОБНИЦТВО / МАТЕРІАЛИ ====== -->
+         <section class="process">
+            <div class="container">
+                <div class="process-content">
+                    <div class="process-text">
+                        <p class="subtitle">MATERIALS</p>
+                        <h2>Very Serious Process For Making Furniture</h2> 
+                        <p>Because our private satisfaction is at the heart of its design...</p>
+                    </div>
+                    <div class="process-gallery"> 
+                        <img src="images/кухня 2.png" alt="Gallery image 1" class="img1">
+                        <img src="images/кухня 3.png" alt="Gallery image 2" class="img2">
+                        <img src="images/кухня 1.png" alt="Gallery image 3" class="img3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== ВІДГУКИ КЛІЄНТІВ ====== -->
+         <P id="Testimonials"></P> <!-- Якір для посилання на секцію відгуки -->
+        <h2 class="our">Our Client Reviews</h2> 
+        <section class="testimonials-gallery">
+            <button class="arrow prev-arrow" aria-label="Попередній відгук">
+               &larr;
+            </button>
+           
+            <!-- КАРТОЧКA ВІДГУКУ 1 -->
+           <div class="testimonial-card">  
+               <div class="card-image-wrapper"> <!-- Обгортка для зображення в картці відгуку -->
+                   <img src="images/підвал 3.png" alt="Bang Upin" class="card-image">
+               </div>
+               <div class="testimonial-content"> <!-- Контент відгуку -->
+                   <div class="avatar-wrapper"> <!-- Обгортка для аватара -->
+                       <img src="images/uk.png" alt="Bang Upin avatar" class="avatar"> <!-- Аватар -->
+                   </div>
+                   <h4 class="client-name">Bang Upin</h4> <!-- Ім'я клієнта -->
+                   <p class="client-title">London, UK</p> <!-- Місто та країна -->
+                   <blockquote class="client-quote">
+                       "Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal"
+                   </blockquote>
+                   <div class="rating"> <!-- Рейтинг зірочками -->
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star empty">&#9733;</span> </div>
+               </div>
+           </div>
+
+           <!-- КАРТОЧКA ВІДГУКУ 2 -->
+           <div class="testimonial-card">
+               <div class="card-image-wrapper">
+                   <img src="images/підвал 1.png" alt="Ibuk Sukijan" class="card-image">
+               </div>
+               <div class="testimonial-content">
+                   <div class="avatar-wrapper">
+                       <img src="images/usa.png" alt="Ibuk Sukijan avatar" class="avatar">
+                   </div>
+                   <h4 class="client-name">Ibuk Sukijan</h4>
+                   <p class="client-title">New-York, USA</p>
+                   <blockquote class="client-quote">
+                       "Makasih Panto, aku sekarang berasa tinggal di apartment karena barang-barang..."
+                   </blockquote>
+                   <div class="rating">
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star empty">&#9733;</span> </div>
+               </div>
+           </div>
+
+           <!-- КАРТОЧКA ВІДГУКУ 3 -->
+           <div class="testimonial-card">
+               <div class="card-image-wrapper">
+                   <img src="images/підвал 2.png" alt="Mpok Ina" class="card-image">
+               </div>
+               <div class="testimonial-content">
+                   <div class="avatar-wrapper">
+                       <img src="images/franse.png" alt="Mpok Ina avatar" class="avatar">
+                   </div>
+                   <h4 class="client-name">Mpok Ina</h4>
+                   <p class="client-title">Paris, Franse</p>
+                   <blockquote class="client-quote">
+                       "Sangat terjangkau untuk kantong saya yang tidak terlalu banyak"
+                   </blockquote>
+                   <div class="rating">
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star empty">&#9733;</span> </div>
+               </div>
+           </div>
+
+           <!-- КАРТОЧКA ВІДГУКУ 4 -->
+           <div class="testimonial-card">
+               <div class="card-image-wrapper">
+                   <img src="#" alt="John Doe" class="card-image"> </div>
+               <div class="testimonial-content">
+                   <div class="avatar-wrapper">
+                       <img src="#" alt="John Doe avatar" class="avatar"> </div>
+                   <h4 class="client-name">John Doe</h4>
+                   <p class="client-title">Berlin, Germany</p>
+                   <blockquote class="client-quote">
+                       "This is a sample review for the carousel to work properly. Amazing!"
+                   </blockquote>
+                   <div class="rating">
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span> </div>
+               </div>
+           </div>
+
+           <!-- КАРТОЧКA ВІДГУКУ 5 -->
+           <div class="testimonial-card">
+               <div class="card-image-wrapper">
+                   <img src="#" alt="John Doe" class="card-image"> </div>
+               <div class="testimonial-content">
+                   <div class="avatar-wrapper">
+                       <img src="#" alt="John Doe avatar" class="avatar"> </div>
+                   <h4 class="client-name">John Doe</h4>
+                   <p class="client-title">Berlin, Germany</p>
+                   <blockquote class="client-quote">
+                       "This is a sample review for the carousel to work properly. Amazing!"
+                   </blockquote>
+                   <div class="rating">
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span> </div>
+               </div>
+           </div>
+
+              <!-- КАРТОЧКA ВІДГУКУ 6 -->
+           <div class="testimonial-card">
+            <div class="card-image-wrapper">
+                <img src="#" alt="John Doe" class="card-image"> </div>
+            <div class="testimonial-content">
+                <div class="avatar-wrapper">
+                    <img src="#" alt="John Doe avatar" class="avatar"> </div>
+                <h4 class="client-name">John Doe</h4>
+                <p class="client-title">Berlin, Germany</p>
+                <blockquote class="client-quote">
+                    "This is a sample review for the carousel to work properly. Amazing!"
+                </blockquote>
+                <div class="rating">
+                    <span class="star filled">&#9733;</span>
+                    <span class="star filled">&#9733;</span>
+                    <span class="star filled">&#9733;</span>
+                    <span class="star filled">&#9733;</span>
+                    <span class="star filled">&#9733;</span> </div>
+            </div>
+        </div>
+        
+           <!-- КАРТОЧКA ВІДГУКУ 7 -->
+           <div class="testimonial-card">
+               <div class="card-image-wrapper">
+                   <img src="#" alt="Jane Smith" class="card-image"> </div>
+               <div class="testimonial-content">
+                   <div class="avatar-wrapper">
+                       <img src="#" alt="Jane Smith avatar" class="avatar"> </div>
+                   <h4 class="client-name">Jane Smith</h4>
+                   <p class="client-title">Tokyo, Japan</p>
+                   <blockquote class="client-quote">
+                       "Just adding one more card to demonstrate the circular scrolling effect."
+                   </blockquote>
+                   <div class="rating">
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star filled">&#9733;</span>
+                       <span class="star empty">&#9733;</span> </div>
+               </div>
+           </div>
+           
+            <button class="arrow next-arrow" aria-label="Наступний відгук">
+               &rarr;
+            </button>
+           </section>
+
+    </main>
+
+    <!-- ====== ПІДВАЛ САЙТУ ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid"> <!-- 4 колонки з інформацією -->
+                <div class="footer-col">
+                    <a href="#" class="logo">Furni.</a> <!-- Логотип -->
+                    <p>The advantage of hiring a workspace with us is that givees you comfortable service.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Email Marketing</a></li>
+                        <li><a href="#">Campaigns</a></li>
+                        <li><a href="#">Branding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQs</a></li> 
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#Testimonials">Testimonials</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"> <!-- Нижня частина підвалу -->
+                <p>&copy; 2025 Furni. All rights reserved.</p> <!-- Авторські права -->
+                <div>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script> <!-- Підключення JavaScript-файлу з відкладеним завантаженням -->
+</body>
+</html>
+

@@ -1,0 +1,662 @@
+/* === ЗАГАЛЬНІ СТИЛІ ТА ІМПОРТ ШРИФТІВ === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Скидання стилів браузера за замовчуванням */
+* {
+    margin: 0; /* Прибирає зовнішні відступи для всіх елементів */
+    padding: 0; /* Прибирає внутрішні відступи для всіх елементів */
+    box-sizing: border-box; /* Змінює модель розрахунку розмірів блоків, включаючи padding і border в ширину/висоту */
+}
+
+/* Базові стилі для всього документа */
+body {
+    font-family: 'Poppins', sans-serif; /* Встановлює основний шрифт для всього сайту */
+    color: #333; /* Встановлює основний колір тексту */
+    background-color: #f8f9fa; /* Встановлює світлий фоновий колір */
+}
+
+/* Стилі для контейнера, що обмежує ширину контенту та центрує його */
+.container {
+    max-width: 1450px; /* Максимальна ширина контейнера */
+    margin: 0 auto; /* Центрує контейнер по горизонталі */
+    padding: 0 20px; /* Внутрішні відступи зліва і справа для мобільних пристроїв */
+}
+
+/* Стилі для посилань */
+a {
+    text-decoration: none; /* Прибирає підкреслення у посилань */
+    color: inherit; /* Посилання успадковують колір тексту від батьківського елемента */
+}
+
+/* Стилі для списків */
+ul {
+    list-style-type: none; /* Прибирає маркери у списків */
+}
+
+
+
+
+
+/* ================= СТИЛІ ДЛЯ HEADER (ШАПКИ САЙТУ) ============== */
+
+
+.header {
+    background-color: transparent; /* Робить фон шапки прозорим */
+    padding: 20px 0; /* Внутрішні відступи зверху та знизу */
+    position: absolute; /* Абсолютне позиціонування, щоб шапка була поверх hero секції */
+    width: 100%; /* Шапка займає всю ширину екрану */
+    top: 0; /* Розташування зверху */
+    left: 0; /* Розташування зліва */
+    z-index: 100; /* Встановлює високий z-index, щоб шапка була над іншими елементами */
+}
+
+/* Стилі для навігації */
+.main-nav {
+    display: flex; /* Використовує Flexbox для вирівнювання елементів */
+    justify-content: space-between; /* Розподіляє елементи по краях (лого зліва, меню і іконки справа) */
+    align-items: center; /* Вирівнює елементи по вертикальному центру */
+    font-size: 20px; /* Розмір шрифту для навігації */
+}
+
+/* Стилі для логотипу */
+.logo {
+    font-size: 30px; /* Розмір шрифту логотипу */
+    font-weight: 700; /* Жирність шрифту */
+    color: #fff; /* Колір тексту логотипу (білий для контрасту з фоном) */
+}
+
+/* Стилі для списку навігації */
+.main-nav ul {
+    display: flex; /* Елементи списку (пункти меню) розташовуються в рядок */
+    gap: 50px; /* Відстань між пунктами меню */
+}
+
+.main-nav ul li a {
+    color: #fff; /* Колір тексту посилань */
+    font-weight: 600; /* Напівжирний шрифт */
+    transition: color 0.3s ease; /* Плавний перехід кольору при наведенні */
+}
+
+.main-nav ul li a:hover {
+    color: #f39c12; /* Колір тексту при наведенні курсору */
+}
+
+/* Стилі для іконок в навігації */
+.nav-icons {
+    display: flex; /* Іконки розташовуються в рядок */
+    gap: 30px; /* Відстань між іконками */
+}
+
+.nav-icons a {
+    color: #fff; /* Колір іконок */
+    font-size: 21px; /* Розмір іконок */
+}
+
+/* Стилі для випадаючого списку <select> в навігації =========================================== хз чи залишати */
+:root {
+    --accent-color: #f39c12;
+  }
+  
+  .dropdown {
+    position: relative; /* Необхідно, щоб .dropdown-content позиціонувався відносно кнопки */
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: #e67e22; 
+    color: #fff; 
+    font-size: 18px; 
+    padding: 5px 30px; 
+    border-radius: 20px; /* Закруглені краї */
+    font-weight: 600; 
+    transition: background-color 0.3s ease; 
+    border: none; 
+    cursor: pointer;   
+  }
+  
+  .dropdown-content {
+    text-align: center;
+    display: none; /* Сховано за замовчуванням */
+    position: absolute;
+    z-index: 1; /* Має бути поверх іншого контенту */
+    min-width: 100px;
+    border-radius: 20px;
+    background-color: rgba(30, 30, 30, 0.9);
+  }
+  
+
+  .dropdown-content a {
+    color: white; /* Текст посилань залишається білим і чітким */
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 10px; 
+    display: block; /* Робить посилання на всю ширину */
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(243, 156, 18, 0.5); /* Ваш напівпрозорий помаранчевий акцент */
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block; /* Показуємо меню */
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #e08e0b; /* Трохи темніший акцент */
+  }
+
+
+
+
+
+/* ============= СТИЛІ ДЛЯ HERO SECTION (ГОЛОВНОЇ СЕКЦІЇ) =============== */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('../images/1441.png'); /* Фонове зображення з затемненням */
+    height: 150vh; /* Висота секції на весь екран */
+    background-size: cover; /* Зображення покриває всю доступну площу */
+    background-position: center; /* Центрує фонове зображення */
+    display: flex; /* Використовує Flexbox */
+    align-items: left; /* Вирівнює контент по вертикальному  */
+    text-align: center; /* Центрує текст */
+}
+
+.hero-content {
+    color: #fff; /* Колір тексту в секції */
+    max-width: 700px; /* Максимальна ширина текстового блоку */
+    margin: 0 auto; /* Центрування блоку */
+}
+
+.hero-content h1 {
+    font-size: 55px; /* Розмір головного заголовка */
+    margin-bottom: 20px; /* Відступ знизу */
+    margin-top: 300px; /* Відступ зверху */
+}
+
+.hero-content p {
+    font-size: 21px; /* Розмір тексту параграфа */
+    margin-bottom: 20px; /* Відступ знизу */
+}
+
+
+.btn {
+    background-color: #e67e22; /* Колір фону кнопки */
+    color: #fff; /* Колір тексту кнопки */
+    padding: 15px 30px; /* Внутрішні відступи кнопки */
+    border-radius: 30px; /* Закруглення кутів */
+    font-weight: 600; /* Жирність шрифту */
+    transition: background-color 0.3s ease; /* Плавний перехід кольору фону */
+    
+}
+.btn:hover {
+    background-color: #d35400; /* Колір фону при наведенні */
+}
+
+
+
+
+/* ======= СТИЛІ СЕКЦІЇ "ЧОМУ ОБИРАЮТЬ НАС" ================ */
+.features {
+    padding: 80px 0; /* Внутрішні відступи секції */
+    background-color: #fff; /* Білий фон */
+}
+
+.features-header {
+    text-align: center; /* Центрування заголовка */
+    margin-bottom: 50px; /* Відступ знизу */
+}
+
+.features-header h2 {
+    font-size: 36px; /* Розмір шрифту заголовка */
+}
+
+/* Сітка для елементів */
+.features-grid {
+    display: grid; /* Використання CSS Grid для створення колонок */
+    grid-template-columns: repeat(3, 1fr); /* Створює три колонки однакової ширини */
+    gap: 30px; /* Відстань між колонками */
+    text-align: center; /* Центрування тексту в колонках */
+}
+
+.feature-item h3 {
+    font-size: 20px; /* Розмір заголовка елемента */
+    margin-bottom: 15px; /* Відступ знизу */
+}
+
+.feature-item p {
+    color: #666; /* Колір тексту параграфа */
+    line-height: 1.6; /* Міжрядковий інтервал */
+}
+
+
+
+
+
+/* ======== СТИЛІ СЕКЦІЇ "НАЙКРАЩІ ТОВАРИ" ============ */
+.best-selling {
+    padding: 80px 0; /* Внутрішні відступи */
+    text-align: center; /* Центрування контенту */
+}
+
+.best-selling h2 {
+    font-size: 36px; /* Розмір заголовка */
+    margin-bottom: 30px; /* Відступ знизу */
+}
+
+/* Стилі для табів (кнопок-фільтрів) */
+.product-tabs {
+    margin-bottom: 50px; /* Відступ знизу */
+    display: flex; /* Елементи в рядок */
+    justify-content: center; /* Центрування по горизонталі */
+    gap: 20px; /* Відстань між кнопками */
+}
+
+.tab-btn {
+    background: none; /* Прозорий фон */
+    border: none; /* Без рамки */
+    font-size: 16px; /* Розмір шрифту */
+    font-weight: 500; /* Напівжирний шрифт */
+    cursor: pointer; /* Змінює курсор на "руку" */
+    padding: 10px 20px; /* Внутрішні відступи */
+    border-radius: 5px; /* Закруглення кутів */
+    transition: all 0.3s ease; /* Плавний перехід */
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background-color: #333; /* Фон для активної/наведеної кнопки */
+    color: #fff; /* Колір тексту для активної/наведеної кнопки */
+}
+
+.tab-content {
+    display: none; /* Сховано за замовчуванням */
+}
+
+.tab-content.active {
+    display: block; /* Показує контент активного табу */
+}
+/* Сітка для карток товарів */
+.product-grid {
+    display: grid; /* Використання CSS Grid */
+    grid-template-columns: repeat(4, 1fr); /* Чотири колонки однакової ширини */
+    gap: 30px; /* Відстань між картками */
+}
+
+/* Стилі для картки товару */
+.product-card {
+    background-color: #fff; /* Білий фон */
+    padding: 20px; /* Внутрішні відступи */
+    text-align: left; /* Вирівнювання тексту зліва */
+    border-radius: 8px; /* Закруглення кутів */
+    position: relative; /* Встановлює позиціонування для дочірніх елементів */
+}
+
+.product-image {
+    background-color: #f1f1f1; /* Світло-сірий фон для зображення */
+    padding: 20px; /* Відступи навколо зображення */
+    border-radius: 8px; /* Закруглення кутів */
+    margin-bottom: 15px; /* Відступ знизу */
+}
+
+.product-card img {
+    width: 100%; /* Зображення займає всю ширину блоку */
+    display: block; /* Робить зображення блочним елементом */
+}
+
+.product-card h3 {
+    font-size: 18px; /* Розмір назви товару */
+    font-weight: 600; /* Жирність шрифту */
+}
+
+.price {
+    font-weight: 700; /* Жирний шрифт для ціни */
+    color: #333; /* Колір ціни */
+    margin-top: 5px; /* Відступ зверху */
+}
+
+/* Кнопка "додати в кошик" */
+.add-to-cart {
+    position: absolute; /* Абсолютне позиціонування відносно .product-card */
+    bottom: 20px; /* Позиція від нижнього краю */
+    right: 20px; /* Позиція від правого краю */
+    background-color: #333; /* Колір фону */
+    color: #fff; /* Колір іконки/тексту */
+    width: 35px; /* Ширина */
+    height: 35px; /* Висота */
+    border-radius: 50%; /* Робить кнопку круглою */
+    display: flex; /* Використання Flexbox для центрування */
+    align-items: center; /* Центрування по вертикалі */
+    justify-content: center; /* Центрування по горизонталі */
+    font-size: 20px; /* Розмір плюса */
+    transition: background-color 0.3s ease; /* Плавний перехід */
+}
+
+.add-to-cart:hover {
+    background-color: #e67e22; /* Колір фону при наведенні */
+}
+
+.view-all {
+    display: inline-block; /* Робить посилання блочно-рядковим */
+    margin-top: 50px; /* Відступ зверху */
+    font-weight: 600; /* Жирний шрифт */
+    color: #e67e22; /* Колір тексту */
+}
+
+
+
+
+
+/* ========== СТИЛІ СЕКЦІЇ "ДОСВІД" ========================== */
+.experience, .process {
+    padding: 80px 0; /* Внутрішні відступи */
+    background: #fff; /* Білий фон */
+}
+
+.experience-content, .process-content {
+    display: grid; /* Використання CSS Grid */
+    grid-template-columns: 1fr 1fr; /* Дві колонки однакової ширини */
+    gap: 50px; /* Відстань між колонками */
+    align-items: center; /* Вирівнювання по вертикальному центру */
+}
+
+.experience-image img {
+    width: 100%; /* Зображення займає всю ширину колонки */
+    border-radius: 10px; /* Закруглення кутів */
+}
+
+.subtitle {
+    font-weight: 600; /* Жирний шрифт */
+    color: #666; /* Сірий колір тексту */
+    margin-bottom: 10px; /* Відступ знизу */
+    letter-spacing: 1px; /* Міжсимвольний інтервал */
+}
+
+.experience-text h2, .process-text h2 {
+    font-size: 36px; /* Розмір заголовка */
+    margin-bottom: 20px; /* Відступ знизу */
+}
+
+.experience-text p, .process-text p {
+    color: #666; /* Колір тексту */
+    line-height: 1.7; /* Міжрядковий інтервал */
+}
+
+
+
+
+
+/* ============= СТИЛІ СЕКЦІЇ "ПРОЦЕС" =========================== */
+.process-gallery {
+    display: grid; /* Використання Grid для галереї */
+    grid-template-columns: repeat(2, 1fr); /* Дві колонки */
+    grid-template-rows: repeat(2, 200px); /* Два рядки висотою 200px */
+    gap: 15px; /* Відстань між зображеннями */
+}
+
+.process-gallery img {
+    width: 100%; /* Ширина зображення */
+    height: 100%; /* Висота зображення */
+    object-fit: cover; /* Зображення покриває блок, зберігаючи пропорції */
+    border-radius: 8px; /* Закруглення кутів */
+}
+
+/* Розташування зображень в сітці */
+.process-gallery .img1 {
+    grid-row: 1 / 3; /* Зображення займає 2 рядки */
+}
+.process-gallery .img2 {
+    grid-column: 2 / 3; /* Зображення у другій колонці */
+}
+.process-gallery .img3 {
+    grid-column: 2 / 3; /* Зображення у другій колонці */
+}
+
+
+
+
+
+
+
+
+
+/* ===================== СТИЛІ "ВІДГУКИ" =============================== */
+
+:root {
+    --card-bg-color: #ffffff; /* Білий фон картки */
+    --primary-color: #f7a940; /* Колір зірочок/акценту */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/*  Галерея  */
+.testimonials-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Вирівнює стрілки та картки */
+    gap: 20px;
+    padding: 50px 0;
+    background-color: #f7f7f7; /* Легкий фон секції */
+    overflow: hidden; /* Обрізаємо все, що виходить за межі */
+    position: relative;
+}
+
+/* Стрілки */
+.arrow {
+    background: var(--card-bg-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    z-index: 10;
+    transition: background-color 0.3s;
+    color: #333;
+    position: absolute; /* Позиціонуємо абсолютно відносно галереї */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-arrow { left: 10px; }
+.next-arrow { right: 10px; }
+
+.arrow:hover {
+    background-color: #eee;
+}
+
+/* Картка відгуку  */
+.testimonial-card {
+    width: 300px; /* Фіксована ширина картки */
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Тінь для ефекту "вискакуваня" */
+}
+
+/* Контейнер для зображення */
+.card-image-wrapper {
+    height: 400px;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Зображення покриває весь контейнер */
+}
+
+/*  Контент відгуку (Білий блок) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.testimonial-content {
+    background-color: var(--card-bg-color);
+    padding: 40px 25px 25px; /* Більший відступ зверху, щоб вмістити аватар */
+    text-align: center;
+    
+    /* Ключовий ефект: Зсуваємо блок вгору і робимо його напівкруглим */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    /* Створення напівкруглого/вигнутого верху */
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    box-shadow: 0 -5px 10px var(--shadow-color); /* Тінь на стику */
+}
+
+
+.avatar-wrapper {
+    position: absolute;
+    top: -50px; /* Зміщення вгору, щоб він був накладений на зображення */
+    left: 50%;
+    transform: translateX(-50%); /* Центрування */
+    
+    /* Створення білого обведення навколо аватара */
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--card-bg-color);
+    padding: 5px; /* Обведення */
+    box-shadow: 0 0 0 2px #fff, 0 4px 6px rgba(0, 0, 0, 0.1); /* Додаткова тінь */
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Текст і рейтинг */
+.client-name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.client-title {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.client-quote {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Стилізація зірочок */
+.rating {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.rating .star.empty {
+    color: #ccc; /* Сірий колір для незаповнених зірок */
+}
+
+/* ======================================= Анімація появи картки ========================================= */
+
+/* Контейнер галереї */
+.testimonials-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ЦЕНТРУЄ ОДНУ КАРТКУ ПО ГОРИЗОНТАЛІ */
+    position: relative;
+    padding: 0 60px;
+    /* Видаляємо 'gap: 20px', який був для 3-х карток */
+    min-height: 550px;
+}
+
+/* Картки відгуків */
+.testimonial-card {
+    /* Робимо картку великою, щоб вона займала центр */
+    max-width: 300px; 
+    width: 100%;
+    flex-shrink: 0;
+    
+    display: none; /* (ВАЖЛИВО) Ховаємо всі картки за замовчуванням */
+    
+    /* Додаткові стилі картки (тінь, фон тощо) */
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    text-align: center;
+    position: relative;
+}
+
+/* (ВАЖЛИВО) Показуємо тільки картку з класом .active */
+.testimonial-card.active {
+    display: block; 
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+
+/* ======================== СТИЛІ ДЛЯ FOOTER (ПІДВАЛУ САЙТУ) ===================================== */
+.footer {
+    background-color: #2c3e50; /* Темний фон підвалу */
+    color: #bdc3c7; /* Світло-сірий колір тексту */
+    padding: 60px 0 20px; /* Внутрішні відступи */
+}
+
+.footer-grid {
+    display: grid; /* Використання Grid */
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* Чотири колонки різної ширини */
+    gap: 40px; /* Відстань між колонками */
+    margin-bottom: 40px; /* Відступ знизу */
+}
+
+.footer-col .logo {
+    color: #fff; /* Білий колір логотипу */
+    display: inline-block; /* Робить лого блочно-рядковим */
+    margin-bottom: 20px; /* Відступ знизу */
+}
+
+.footer-col h4 {
+    color: #fff; /* Білий колір заголовків */
+    font-size: 18px; /* Розмір шрифту */
+    margin-bottom: 20px; /* Відступ знизу */
+}
+
+.footer-col ul li {
+    margin-bottom: 10px; /* Відступ між пунктами списку */
+}
+
+.footer-col ul li a {
+    color: #bdc3c7; /* Колір посилань */
+    transition: color 0.3s ease; /* Плавний перехід кольору */
+}
+
+.footer-col ul li a:hover {
+    color: #fff; /* Колір посилань при наведенні */
+}
+
+/* Нижня частина підвалу */
+.footer-bottom {
+    border-top: 1px solid #34495e; /* Лінія-розділювач */
+    padding-top: 20px; /* Відступ зверху */
+    display: flex; /* Використання Flexbox */
+    justify-content: space-between; /* Розподілення елементів по краях */
+    align-items: center; /* Вирівнювання по центру */
+    font-size: 14px; /* Розмір шрифту */
+}
+
+.footer-bottom a {
+    margin-left: 20px; /* Відступ між посиланнями */
+}
+
+
+
+
+
+
+/* ==================== додаткові елемкнти про які я неїбу як зробити нормально ====================== */
+.our {
+    text-align: center;
+    font-size: 36px; /* Розмір заголовка */
+    margin-bottom: 0px; /* Відступ знизу */
+    margin-top: 50px; /* Відступ зверху */
+}
+
+
+
