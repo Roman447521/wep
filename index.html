@@ -56,28 +56,48 @@
         </section>
 
         <!-- ====== ПЕРЕВАГИ ====== -->
-        <section class="features">
-            <div class="container">
-                <div class="features-header">
-                    <h2>Why Choosing Us</h2> <!-- Заголовок секції -->
+        <section class="features-section"> <!-- Секція з перевагами -->
+            <div class="container"> <!-- Контейнер Bootstrap -->
+                <div class="text-center mb-5"> <!-- Заголовок по центру -->
+                    <h2 class="section-title">Why Choosing Us</h2> <!-- Назва секції -->
                 </div>
-                <div class="features-grid"> <!-- Сітка із 3 блоків переваг -->
-                    <div class="feature-item">
-                        <h3>Luxury facilities</h3> <!-- Назва першої переваги -->
-                        <p>The advantage of hiring a workspace with us is that givees you comfortable service.</p>
+        
+                <div class="row g-4"> <!-- Рядок з відступами між колонками -->
+        
+                    <div class="col-md-4"> <!-- Колонка 1 -->
+                        <div class="feature-card"> <!-- Картка переваги -->
+                            <div class="feature-icon"> <!-- Іконка -->
+                                <i class="fas fa-shipping-fast"></i> <!-- Іконка доставки -->
+                            </div>
+                            <h4>Luxury Facilities</h4> <!-- Назва переваги -->
+                            <p>The advantage of hiring a workspace with us is that gives you comfortable service and all-around facilities.</p> <!-- Опис -->
+                        </div>
                     </div>
-                    <div class="feature-item">
-                        <h3>Affordable Price</h3> <!-- Назва другої переваги -->
-                        <p>You can get a workspace of the highest quality at an affordable price and still enjoy the facilities.</p>
+        
+                    <div class="col-md-4"> <!-- Колонка 2 -->
+                        <div class="feature-card"> <!-- Картка переваги -->
+                            <div class="feature-icon"> <!-- Іконка -->
+                                <i class="fas fa-dollar-sign"></i> <!-- Іконка ціни -->
+                            </div>
+                            <h4>Affordable Price</h4> <!-- Назва переваги -->
+                            <p>You can get a workspace at an affordable price according to your pocket and services.</p> <!-- Опис -->
+                        </div>
                     </div>
-                    <div class="feature-item">
-                        <h3>Many Choices</h3> <!-- Назва третьої переваги -->
-                        <p>We provide many unique work space choices so that you can choose the workspace to your liking.</p>
+        
+                    <div class="col-md-4"> <!-- Колонка 3 -->
+                        <div class="feature-card"> <!-- Картка переваги -->
+                            <div class="feature-icon"> <!-- Іконка -->
+                                <i class="fas fa-users"></i> <!-- Іконка користувачів -->
+                            </div>
+                            <h4>Many Choices</h4> <!-- Назва переваги -->
+                            <p>We provide many unique work space choices so that you can choose the workspace to your liking.</p> <!-- Опис -->
+                        </div>
                     </div>
+        
                 </div>
             </div>
         </section>
-
+        
         <!-- ====== КАТАЛОГ ТОВАРІВ ====== -->
         <section class="best-selling">
             <div class="container">
@@ -130,18 +150,128 @@
                     </div>
                 </div>
 
-
-
-                <div id="beds-content" class="tab-content"> 
-                    <p style="text-align: center; padding: 40px; font-size: 18px; color: #666;">Товари категорії "Beds" будуть тут.</p>
+                <div id="beds-content" class="tab-content">  <!-- Вміст для категорії "Bed" -->
+                    <div class="product-grid"> <!-- Сітка товарів -->
+                        <!-- перший товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/ліжко 1.png" alt="Curtain Arm Chair">  <!-- Зображення товару -->
+                            </div> 
+                            <h3>Soft bed Mila from Galicia</h3> <!-- Назва товару -->
+                            <p class="price">$ 290</p> <!-- Ціна товару -->
+                            <a href="#" class="add-to-cart">+</a> <!-- Кнопка додавання в кошик -->
+                        </div>
+                        <!-- другий товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/ліжко 2.png" alt="Concept Chair">
+                            </div>
+                            <h3>Soft bed from Green</h3>
+                            <p class="price">$ 380</p>
+                            <a href="#" class="add-to-cart">+</a>
+                        </div>
+                        <!-- третій товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/ліжко 3.png" alt="Aulis Chair">
+                            </div>
+                            <h3>Wooden bed Tokyo New </h3>
+                            <p class="price">$ 450</p>
+                            <a href="#" class="add-to-cart">+</a>
+                        </div>
+                        <!-- четвертий товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/ліжко 4.png" alt="Armchair Patch">
+                            </div>
+                            <h3>Soft bed Florida from LVM</h3>
+                            <p class="price">$ 550</p>
+                            <a href="#" class="add-to-cart">+</a>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="sofa-content" class="tab-content"> 
-                    <p style="text-align: center; padding: 40px; font-size: 18px; color: #666;">Товари категорії "Sofa" будуть тут.</p>
+                <div id="sofa-content" class="tab-content">  <!-- Вміст для категорії "Chair" -->
+                    <div class="product-grid"> <!-- Сітка товарів -->
+                        <!-- перший товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/крісло 1.png" alt="Curtain Arm Chair">  <!-- Зображення товару -->
+                            </div> 
+                            <h3>Curtain Arm Chair</h3> <!-- Назва товару -->
+                            <p class="price">$ 12</p> <!-- Ціна товару -->
+                            <a href="#" class="add-to-cart">+</a> <!-- Кнопка додавання в кошик -->
+                        </div>
+                        <!-- другий товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/крісло 3.png" alt="Concept Chair">
+                            </div>
+                            <h3>Concept Chair</h3>
+                            <p class="price">$ 18</p>
+                            <a href="#" class="add-to-cart">+</a>
+                        </div>
+                        <!-- третій товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/крісло 2.png" alt="Aulis Chair">
+                            </div>
+                            <h3>Aulis Chair</h3>
+                            <p class="price">$ 20</p>
+                            <a href="#" class="add-to-cart">+</a>
+                        </div>
+                        <!-- четвертий товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/крісло 4.png" alt="Armchair Patch">
+                            </div>
+                            <h3>Armchair Patch</h3>
+                            <p class="price">$ 15</p>
+                            <a href="#" class="add-to-cart">+</a>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="lamp-content" class="tab-content"> 
-                    <p style="text-align: center; padding: 40px; font-size: 18px; color: #666;">Товари категорії "Lamp" будуть тут.</p>
+                <div id="lamp-content" class="tab-content">  <!-- Вміст для категорії "Chair" -->
+                    <div class="product-grid"> <!-- Сітка товарів -->
+                        <!-- перший товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/крісло 1.png" alt="Curtain Arm Chair">  <!-- Зображення товару -->
+                            </div> 
+                            <h3>Curtain Arm Chair</h3> <!-- Назва товару -->
+                            <p class="price">$ 00000</p> <!-- Ціна товару -->
+                            <a href="#" class="add-to-cart">+</a> <!-- Кнопка додавання в кошик -->
+                        </div>
+                        <!-- другий товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/крісло 3.png" alt="Concept Chair">
+                            </div>
+                            <h3>Concept Chair</h3>
+                            <p class="price">$ 00000</p>
+                            <a href="#" class="add-to-cart">+</a>
+                        </div>
+                        <!-- третій товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/крісло 2.png" alt="Aulis Chair">
+                            </div>
+                            <h3>Aulis Chair</h3>
+                            <p class="price">$ 00000</p>
+                            <a href="#" class="add-to-cart">+</a>
+                        </div>
+                        <!-- четвертий товар -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/крісло 4.png" alt="Armchair Patch">
+                            </div>
+                            <h3>Armchair Patch</h3>
+                            <p class="price">$ 00000</p>
+                            <a href="#" class="add-to-cart">+</a>
+                        </div>
+                    </div>
+                </div>
                 </div>
 
                  <a href="#" class="view-all">View All &rarr;</a> </div>

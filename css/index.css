@@ -193,41 +193,152 @@ ul {
 
 
 
-/* ======= СТИЛІ СЕКЦІЇ "ЧОМУ ОБИРАЮТЬ НАС" ================ */
-.features {
-    padding: 80px 0; /* Внутрішні відступи секції */
-    background-color: #fff; /* Білий фон */
+/* ==========================================================================
+   СТИЛІ ДЛЯ СЕКЦІЇ "WHY CHOOSING US" (БЕЗ BOOTSTRAP)
+   ========================================================================== */
+
+/* Основні налаштування секції */
+.features-section {
+    padding: 100px 0; /* Великі відступи зверху/знизу для "повітря" */
+    background-color: #fff; /* Білий фон, щоб відповідати стилю сайту */
 }
 
-.features-header {
-    text-align: center; /* Центрування заголовка */
-    margin-bottom: 50px; /* Відступ знизу */
+/* --- Заміна класів Bootstrap своїми стилями --- */
+
+/* Центрування тексту (заміна класу .text-center) */
+.features-section .text-center {
+    text-align: center;
 }
 
-.features-header h2 {
-    font-size: 36px; /* Розмір шрифту заголовка */
+/* Відступ знизу для заголовка (заміна класу .mb-5) */
+.features-section .mb-5 {
+    margin-bottom: 50px;
 }
 
-/* Сітка для елементів */
-.features-grid {
-    display: grid; /* Використання CSS Grid для створення колонок */
-    grid-template-columns: repeat(3, 1fr); /* Створює три колонки однакової ширини */
-    gap: 30px; /* Відстань між колонками */
-    text-align: center; /* Центрування тексту в колонках */
+/* Імітація сітки (заміна класу .row) */
+.features-section .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки однакової ширини */
+    gap: 30px; /* Відстань між картками */
+    align-items: stretch; /* Картки будуть однакової висоти */
 }
 
-.feature-item h3 {
-    font-size: 20px; /* Розмір заголовка елемента */
-    margin-bottom: 15px; /* Відступ знизу */
+/* Ігноруємо ширину col-md-4, оскільки працюємо через Grid, 
+   але залишаємо клас для сумісності з HTML */
+.features-section .col-md-4 {
+    width: 100%;
 }
 
-.feature-item p {
-    color: #666; /* Колір тексту параграфа */
-    line-height: 1.6; /* Міжрядковий інтервал */
+/* --- Стилізація контенту --- */
+
+/* Заголовок секції */
+.section-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #333;
+    position: relative;
+    display: inline-block;
 }
 
+/* Декоративна лінія під заголовком (опціонально, для краси) */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #e67e22; /* Твій акцентний помаранчевий колір */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
 
+/* --- Картка особливості --- */
+.feature-card {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 20px; /* Сильне закруглення, як у твоїх інших елементах */
+    text-align: center;
+    transition: all 0.3s ease; /* Плавна анімація при наведенні */
+    border: 1px solid #eee; /* Легка рамка */
+    height: 100%; /* Розтягуємо на всю висоту колонки */
+    
+    /* Тінь, схожа на ту, що у відгуках */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
 
+/* Ефект при наведенні на картку */
+.feature-card:hover {
+    transform: translateY(-10px); /* Картка піднімається вгору */
+    box-shadow: 0 15px 30px rgba(230, 126, 34, 0.15); /* Тінь стає помаранчевою */
+    border-color: transparent;
+}
+
+/* --- Іконка --- */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(230, 126, 34, 0.1); /* Прозорий помаранчевий фон */
+    border-radius: 50%; /* Кругла форма */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px; /* Центрування і відступ знизу */
+    transition: all 0.3s ease;
+}
+
+.feature-icon i {
+    font-size: 32px;
+    color: #e67e22; /* Помаранчева іконка */
+}
+
+/* При наведенні на картку іконка зафарбовується */
+.feature-card:hover .feature-icon {
+    background-color: #e67e22;
+}
+
+.feature-card:hover .feature-icon i {
+    color: #fff; /* Іконка стає білою */
+}
+
+/* --- Текст картки --- */
+.feature-card h4 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   АДАПТИВНІСТЬ (Для телефонів і планшетів)
+   ========================================================================== */
+
+/* Для планшетів (менше 992px) */
+@media (max-width: 992px) {
+    .features-section .row {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    }
+}
+
+/* Для мобільних (менше 600px) */
+@media (max-width: 600px) {
+    .features-section .row {
+        grid-template-columns: 1fr; /* 1 колонка */
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .features-section {
+        padding: 60px 0;
+    }
+}
 
 
 /* ======== СТИЛІ СЕКЦІЇ "НАЙКРАЩІ ТОВАРИ" ============ */
@@ -261,7 +372,7 @@ ul {
 }
 
 .tab-btn.active, .tab-btn:hover {
-    background-color: #333; /* Фон для активної/наведеної кнопки */
+    background-color: #e67e22; /* Фон для активної/наведеної кнопки */
     color: #fff; /* Колір тексту для активної/наведеної кнопки */
 }
 
@@ -316,7 +427,7 @@ ul {
     position: absolute; /* Абсолютне позиціонування відносно .product-card */
     bottom: 20px; /* Позиція від нижнього краю */
     right: 20px; /* Позиція від правого краю */
-    background-color: #333; /* Колір фону */
+    background-color: #e67e22; /* Колір фону */
     color: #fff; /* Колір іконки/тексту */
     width: 35px; /* Ширина */
     height: 35px; /* Висота */
