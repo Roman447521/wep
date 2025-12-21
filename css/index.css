@@ -147,18 +147,16 @@ ul {
   }
 
 
-
-
-
 /* ============= СТИЛІ ДЛЯ HERO SECTION (ГОЛОВНОЇ СЕКЦІЇ) =============== */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('../images/1441.png'); /* Фонове зображення з затемненням */
-    height: 150vh; /* Висота секції на весь екран */
+    height: 250%; /*Висота секції на весь екран */
     background-size: cover; /* Зображення покриває всю доступну площу */
     background-position: center; /* Центрує фонове зображення */
     display: flex; /* Використовує Flexbox */
     align-items: left; /* Вирівнює контент по вертикальному  */
     text-align: center; /* Центрує текст */
+    padding: 290px 20px; /* Внутрішні відступи */
 }
 
 .hero-content {
@@ -169,13 +167,13 @@ ul {
 
 .hero-content h1 {
     font-size: 55px; /* Розмір головного заголовка */
-    margin-bottom: 20px; /* Відступ знизу */
-    margin-top: 300px; /* Відступ зверху */
+    margin-bottom: 30px; /* Відступ знизу */
+    margin-top: 0; /* Відступ зверху */
 }
 
 .hero-content p {
     font-size: 21px; /* Розмір тексту параграфа */
-    margin-bottom: 20px; /* Відступ знизу */
+    margin-bottom: 30px; /* Відступ знизу */
 }
 
 
