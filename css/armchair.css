@@ -178,7 +178,7 @@ ul {
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
-
+/* СТИЛІ ДЛЯ СТОРІНКИ КАТАЛОГУ ТОВАРІВ ================== */
 .header {
     background: white;
     border-bottom: 1px solid #e0e0e0;
@@ -268,7 +268,7 @@ body {
 
 .product-rating {
     color: #ffc107;
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 8px;
 }
 
@@ -290,6 +290,15 @@ body {
     border: 1px solid #ddd;
     cursor: pointer;
 }
+
+.filter-item input[type="checkbox"] {
+    accent-color: #e67e22; /* Ваш помаранчевий колір */
+    width: 15px; /* Ширина */
+    height: 15px; /* Висота */
+    cursor: pointer;
+    vertical-align: middle; /* Щоб було рівно з текстом */
+}
+
 /* кнопка сердечко */
 .wishlist-btn {
     position: absolute;
@@ -394,6 +403,30 @@ body {
 /* Сторінкова навігація */
 .sidebar-overlay {
     display: none;
+}
+
+/* кнопка для перекладу */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 20px;
+    color: white; /* Або чорний, залежно від фону */
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0;
+}
+
+.lang-btn.active, .lang-btn:hover {
+    color: #fff; /* Активний колір */
+    text-decoration: underline;
 }
 
 /* Tablet adaptations (992px and below) */

@@ -55,9 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-/* =================================================== */
 /* ====== 1. ЛОГІКА ДЛЯ ВКЛАДОК (BEST SELLING) ====== */
-/* =================================================== */
+
 
 function openTab(evt, contentId) {
     let i, tabcontent, tablinks;
@@ -87,9 +86,7 @@ function openTab(evt, contentId) {
 }
 
 
-/* =============================================================== */
 /* ====== 2. ЛОГІКА ІНІЦІАЛІЗАЦІЇ ТА КАРУСЕЛІ ВІДГУКІВ ====== */
-/* =============================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -166,3 +163,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 }); // Кінець 'DOMContentLoaded'
+
+
+
+/* =================================================== */
+/* ====== скрипт для сторінок з  випадаючої кнопки ====== */
+/* =================================================== */
+ // Функція для відкриття/закриття бічної панелі
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    sidebar.classList.toggle('show');
+    overlay.classList.toggle('show');
+}
+
+const wishlistButtons = document.querySelectorAll('.wishlist-btn');
+
+wishlistButtons.forEach(button => {
+button.addEventListener('click', function() {
+    const icon = this.querySelector('i');
+    
+    // Перемикаємо класи: якщо пусте - стане повним, і навпаки
+    if (icon.classList.contains('bi-heart')) {
+        icon.classList.remove('bi-heart');
+        icon.classList.add('bi-heart-fill');
+        this.style.color = 'red'; // Робимо червоним при активності
+    } else {
+        icon.classList.remove('bi-heart-fill');
+        icon.classList.add('bi-heart');
+        this.style.color = '#999'; // Повертаємо сірий колір
+    }
+});
+});
+

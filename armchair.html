@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Крісла мішки - Інтернет-магазин</title>
+    <title>Furni-armchair</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/chair.css">
+    <link rel="stylesheet" href="css/armchair.css">
+    <link rel="icon" type="image/x-icon" href="ico/favicon 2.ico">
 </head>
 <body>
     <!-- ====== ШАПКА САЙТУ ====== -->
@@ -16,15 +17,15 @@
             <nav class="main-nav"> <!-- Головне меню навігації -->
                 <a href="#" class="logo">Furni.</a> <!-- Логотип сайту -->
                 <ul> <!-- Список навігаційних посилань -->
-                    <li><a href="index.html">Home</a></li> <!-- Посилання на головну -->
-                    <li><a href="about us.html">About Us</a></li> <!-- Про нас -->
+                    <li><a href="index.html" data-key="nav-home">Home</a></li> <!-- Посилання на головну -->
+                    <li><a href="about us.html" data-key="nav-about">About Us</a></li> <!-- Про нас -->
                     <li><a href="services.html">Services</a></li> <!-- Послуги -->
                     <div class="dropdown"> <!-- Випадаюче меню для мобільної версії -->
                         <button class="dropbtn">Furniture</button> 
                         <div class="dropdown-content">
                           <a href="sofa.html">Sofa</a>
                           <a href="#">Bed</a>
-                          <a href="chair.html">Chair</a>
+                          <a href="armchair.html">Armchair</a>
                           <a href="#">Wardrobe</a>
                           <a href="#">Bookshelf</a>
                           <a href="ottoman.html">Ottoman</a>
@@ -33,9 +34,15 @@
                         </div>
                       </div>
                 </ul>
+                
                 <div class="nav-icons"> <!-- Блок іконок справа у меню -->
                     <a href="#"><i class="fas fa-user"></i></a> <!-- Іконка користувача -->
                     <a href="#"><i class="fas fa-shopping-cart"></i></a> <!-- Іконка кошика -->
+                    <!-- <div class="lang-switch">
+                        <button onclick="setLanguage('ua')" class="lang-btn active">UA</button>
+                        <span>|</span>
+                        <button onclick="setLanguage('en')" class="lang-btn">EN</button>
+                    </div> -->
                 </div>
             </nav>
         </div>
@@ -57,29 +64,25 @@
 <!-- ====== КОНТЕНТНА ЧАСТИНА СТОРІНКИ ====== -->
     <div class="header">
         <div class="container">
-            <h1>Крісла мішки</h1>
+            <h1>Soft chairs</h1>
         </div>
     </div>
     
     <div class="container mt-4">
         <button class="btn btn-dark mobile-filter-toggle" onclick="toggleSidebar()">
-            <i class="bi bi-funnel"></i> Показати фільтри
+            <i class="bi bi-funnel"></i> Show filters
         </button>
         
         <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
         
         <div class="filter-section d-flex justify-content-between align-items-center">
-            <button class="btn btn-dark d-none d-md-block">Сховати фільтр</button>
+            <button class="btn btn-dark d-none d-md-block">Hide filter</button>
             <div class="d-flex gap-3 align-items-center">
-                <span class="d-none d-lg-inline">Відобразити</span>
+                <span class="d-none d-lg-inline">Sort by</span>
                 <select class="form-select form-select-sm" style="width: auto;">
-                    <option>Товари</option>
+                    <option>Silence</option>
                 </select>
-                <span class="d-none d-lg-inline">Сортувати за</span>
-                <select class="form-select form-select-sm" style="width: auto;">
-                    <option>Замовчуванням</option>
-                </select>
-                <span class="d-none d-md-inline">На сторінці</span>
+                <span class="d-none d-md-inline">On the page</span>
                 <select class="form-select form-select-sm d-none d-md-inline" style="width: auto;">
                     <option>72</option>
                 </select>
@@ -99,43 +102,43 @@
                     
                     <div class="filter-group">
                         <div class="filter-title">
-                            Типи <i class="bi bi-chevron-down"></i>
+                            Types <i class="bi bi-chevron-down"></i>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="office"> <label for="office">Офісні крісла (1801)</label>
+                            <input type="checkbox" id="office"> <label for="office">Office chairs (1801)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="computer"> <label for="computer">Комп'ютерні крісла (2117)</label>
+                            <input type="checkbox" id="computer"> <label for="computer">Computer chairs (2117)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="soft"> <label for="soft">М'які крісла (591)</label>
+                            <input type="checkbox" id="soft"> <label for="soft">Soft chairs (591)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="rocking"> <label for="rocking">Крісла гойдалки (23)</label>
+                            <input type="checkbox" id="rocking"> <label for="rocking">Rocking chairs (23)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="bar"> <label for="bar">Барні крісла (1023)</label>
+                            <input type="checkbox" id="bar"> <label for="bar">Bar chairs (1023)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="kids"> <label for="kids">Дитячі крісла (24)</label>
+                            <input type="checkbox" id="kids"> <label for="kids">Children's chairs (24)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="beanbag" checked> <label for="beanbag">Безкаркасні крісла (103)</label>
+                            <input type="checkbox" id="beanbag" checked> <label for="beanbag">Frameless chairs (103)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="massage"> <label for="massage">Масажні крісла (8)</label>
+                            <input type="checkbox" id="massage"> <label for="massage">Massage chairs (8)</label>
                         </div>
                     </div>
                     <!-- ціна-->
                     <div class="filter-group">
                         <div class="filter-title">
-                            Ціна <i class="bi bi-chevron-down"></i>
+                            Price <i class="bi bi-chevron-down"></i>
                         </div>
                         <div class="price-range">
                             <div class="range-inputs">
-                                <span>від</span>
+                                <span>from</span>
                                 <input type="number" value="5391" min="0">
-                                <span>до</span>
+                                <span>to</span>
                                 <input type="number" value="15290" min="0">
                                 <button class="btn btn-sm btn-outline-secondary">→</button>
                             </div>
@@ -144,31 +147,25 @@
                     <!-- види-->
                     <div class="filter-group">
                         <div class="filter-title">
-                            Вид крісел <i class="bi bi-chevron-down"></i>
+                            Type of chairs <i class="bi bi-chevron-down"></i>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="pear"> <label for="pear">Крісло Груша (11)</label>
+                            <input type="checkbox" id="pear"> <label for="pear">Rocking chair (13)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="pear"> <label for="pear">Крісло Груша (11)</label>
+                            <input type="checkbox" id="pear"> <label for="pear">Multi-position chair (11)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="pouf"> <label for="pouf">Крісло Пуф (92)</label>
+                            <input type="checkbox" id="pouf"> <label for="pouf">Armchair Pouf (9)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="pear"> <label for="pear">Крісло Груша (11)</label>
-                        </div>
-                        <div class="filter-item">
-                            <input type="checkbox" id="pear"> <label for="pear">Крісло Груша (11)</label>
-                        </div>
-                        <div class="filter-item">
-                            <input type="checkbox" id="pear"> <label for="pear">Крісло Груша (11)</label>
+                            <input type="checkbox" id="pear" checked> <label for="pear">Massage chair (5)</label>
                         </div>
                     </div>
                     <!-- бренди-->
                     <div class="filter-group">
                         <div class="filter-title">
-                            Бренди <i class="bi bi-chevron-down"></i>
+                            Brands <i class="bi bi-chevron-down"></i>
                         </div>
                         <div class="filter-item">
                             <input type="checkbox" id="joyf"> <label for="joyf">Joyf (81)</label>
@@ -177,76 +174,70 @@
                             <input type="checkbox" id="litvinov"> <label for="litvinov">Litvinov (22)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="joyf"> <label for="joyf">Joyf (81)</label>
+                            <input type="checkbox" id="joyf"> <label for="joyf">Onsevig (11)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="litvinov"> <label for="litvinov">Litvinov (22)</label>
+                            <input type="checkbox" id="litvinov"> <label for="litvinov">Gedved (6)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="joyf"> <label for="joyf">Joyf (81)</label>
+                            <input type="checkbox" id="joyf"> <label for="joyf">Oddum (15)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="litvinov"> <label for="litvinov">Litvinov (22)</label>
+                            <input type="checkbox" id="litvinov" checked> <label for="litvinov">Tankedal (2)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="joyf"> <label for="joyf">Joyf (81)</label>
+                            <input type="checkbox" id="joyf"> <label for="joyf">Nebel (9)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="litvinov"> <label for="litvinov">Litvinov (22)</label>
+                            <input type="checkbox" id="litvinov"> <label for="litvinov">Liselje (12)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="joyf"> <label for="joyf">Joyf (81)</label>
-                        </div>
-                        <div class="filter-item">
-                            <input type="checkbox" id="litvinov"> <label for="litvinov">Litvinov (22)</label>
+                            <input type="checkbox" id="joyf"> <label for="joyf">Andrup (5)</label>
                         </div>
                     </div>
                     <!-- колір-->
                     <div class="filter-group">
                         <div class="filter-title">
-                            Колір <i class="bi bi-chevron-down"></i>
+                            Color <i class="bi bi-chevron-down"></i>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="beige"> <label for="beige">Бежевий (20)</label>
+                            <input type="checkbox" id="beige"> <label for="beige">Black (20)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="white"> <label for="white">Білий (6)</label>
+                            <input type="checkbox" id="white"> <label for="white">White (6)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="beige"> <label for="beige">Бежевий (20)</label>
+                            <input type="checkbox" id="beige" checked> <label for="beige">Pink (2)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="white"> <label for="white">Білий (6)</label>
+                            <input type="checkbox" id="white"> <label for="white">Blue (5)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="beige"> <label for="beige">Бежевий (20)</label>
+                            <input type="checkbox" id="beige" checked> <label for="beige">Yellow (4)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="white"> <label for="white">Білий (6)</label>
+                            <input type="checkbox" id="white" checked> <label for="white">Green (16)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="beige"> <label for="beige">Бежевий (20)</label>
+                            <input type="checkbox" id="beige"> <label for="beige">Red (10)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="white"> <label for="white">Білий (6)</label>
+                            <input type="checkbox" id="white"> <label for="white">Orange (3)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="beige"> <label for="beige">Бежевий (20)</label>
+                            <input type="checkbox" id="beige"> <label for="beige">Golden (11)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="white"> <label for="white">Білий (6)</label>
+                            <input type="checkbox" id="white"> <label for="white">Foletovy (4)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="beige"> <label for="beige">Бежевий (20)</label>
+                            <input type="checkbox" id="beige"> <label for="beige">Gray (13)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="white"> <label for="white">Білий (6)</label>
+                            <input type="checkbox" id="white"> <label for="white">Brown (7)</label>
                         </div>
                         <div class="filter-item">
-                            <input type="checkbox" id="beige"> <label for="beige">Бежевий (20)</label>
-                        </div>
-                        <div class="filter-item">
-                            <input type="checkbox" id="white"> <label for="white">Білий (6)</label>
+                            <input type="checkbox" id="beige"> <label for="beige">Beige (9)</label>
                         </div>
                     </div>
                 </div>
@@ -259,12 +250,12 @@
                         <div class="product-card">
                             <span class="new fst-italic">New</span>
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop" alt="Крісло Uni Стальний" class="product-image">
-                            <div class="product-title">Крісло Uni Стальний</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_vetro_verona_grafit_01.jpg alt="Крісло Uni Стальний" class="product-image">
+                            <div class="product-title">Uni Steel Chair</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 137460469 | Закінчується</div>
+                            <div class="product-meta">Num: 137460469 | in stock</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #c8b8a8;"></span>
                                 <span class="color-dot" style="background: #5ca6d6;"></span>
@@ -273,7 +264,7 @@
                                 <span class="color-dot" style="background: #f4d03f;"></span>
                                 <span>+11</span>
                             </div>
-                            <div class="product-price">14370 ₴</div>
+                            <div class="product-price">9500 ₴</div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
@@ -282,12 +273,12 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&h=400&fit=crop" alt="Безкаркасне крісло-мішок Uni Стальний" class="product-image">
-                            <div class="product-title">Безкаркасне крісло-мішок Uni Стальний</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_miks_paradiz_akvamaryn_01.jpg alt="Безкаркасне крісло" class="product-image">
+                            <div class="product-title">Frameless chair Uni Steel</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 137460439 | Закінчується</div>
+                            <div class="product-meta">Num: 137460439 | in stock</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #8b9499;"></span>
                                 <span class="color-dot" style="background: #5ca6d6;"></span>
@@ -306,12 +297,12 @@
                         <div class="product-card">
                             <span class="new fst-italic">New</span>
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=400&fit=crop" alt="Крісло Uni Чорний" class="product-image">
-                            <div class="product-title">Крісло Uni Чорний</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_mesa_safti_boucle_04_01.jpeg alt="Крісло Uni Чорний" class="product-image">
+                            <div class="product-title">Armchair Uni Black</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 137460467 | Закінчується</div>
+                            <div class="product-meta">Num: 137460467 | in stock</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #8b9499;"></span>
                                 <span class="color-dot" style="background: #5ca6d6;"></span>
@@ -320,7 +311,7 @@
                                 <span class="color-dot" style="background: #f4d03f;"></span>
                                 <span>+11</span>
                             </div>
-                            <div class="product-price">14370 ₴</div>
+                            <div class="product-price">25000 ₴</div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
@@ -330,12 +321,12 @@
                         <div class="product-card">
                             <span class="new fst-italic">New</span>
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=400&fit=crop" alt="Крісло Uni Хакі" class="product-image">
-                            <div class="product-title">Крісло Uni Хакі</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_mesa_safti_belfast_13_01.jpeg alt="Крісло Uni Хакі" class="product-image">
+                            <div class="product-title">Armchair Uni Khaki</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 137460466 | Закінчується</div>
+                            <div class="product-meta">Num: 137460466 | in stock</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #8b9499;"></span>
                                 <span class="color-dot" style="background: #5ca6d6;"></span>
@@ -344,7 +335,7 @@
                                 <span class="color-dot" style="background: #f4d03f;"></span>
                                 <span>+11</span>
                             </div>
-                            <div class="product-price">14370 ₴</div>
+                            <div class="product-price">16000 ₴</div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
@@ -354,12 +345,12 @@
                         <div class="product-card">
                             <span class="new fst-italic">New</span>
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=400&h=400&fit=crop" alt="Крісло Uni Бежевий" class="product-image">
-                            <div class="product-title">Крісло Uni Бежевий</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_mesa_space_belfast_22_01.png alt="Крісло Uni Бежевий" class="product-image">
+                            <div class="product-title">Armchair Uni Beige</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 137460460 | Закінчується</div>
+                            <div class="product-meta">Num: 137460460 | in stock</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #c8b8a8;"></span>
                                 <span class="color-dot" style="background: #5ca6d6;"></span>
@@ -378,12 +369,12 @@
                         <div class="product-card">
                             <span class="badge-discount">-15%</span>
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop" alt="Крісло-пуф Moony Balso 2072" class="product-image">
-                            <div class="product-title">Крісло-пуф Moony Balso 2072</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_mesa_sac_terra_80_01.jpg alt="Крісло-пуф Moony Balso 2072" class="product-image">
+                            <div class="product-title">Moony Balso 2072 pouf chair</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 92513185 | Закінчується</div>
+                            <div class="product-meta">Num: 92513185 | Ends</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #e8c5b5;"></span>
                                 <span class="color-dot" style="background: #c8b8a8;"></span>
@@ -401,12 +392,12 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=400&h=400&fit=crop" alt="Крісло-пуф Saloe Balso 2074" class="product-image">
-                            <div class="product-title">Крісло-пуф Saloe Balso 2074</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_mesa_sac_cream_80_01_1.jpg alt="Крісло-пуф Saloe Balso 2074" class="product-image">
+                            <div class="product-title">Saloe Balso 2074 pouf chair</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 92513142 | Поставка до 7 робочих днів</div>
+                            <div class="product-meta">Num: 92513142 | Delivery within 7 working days</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #e8ddd5;"></span>
                                 <span class="color-dot" style="background: #8b7b6f;"></span>
@@ -415,7 +406,7 @@
                                 <span class="color-dot" style="background: #4a3c2e;"></span>
                                 <span>+10</span>
                             </div>
-                            <div class="product-price">6990 ₴</div>
+                            <div class="product-price">69900 ₴</div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
@@ -424,12 +415,12 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1617104678098-de229db51175?w=400&h=400&fit=crop" alt="Крісло Uni Помаранчевий" class="product-image">
-                            <div class="product-title">Крісло Uni Помаранчевий</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_mesa_sac_steel_80_01.jpg alt="Крісло Uni Помаранчевий" class="product-image">
+                            <div class="product-title">Armchair Uni Orange</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 137460464 | Поставка до 15 робочих...</div>
+                            <div class="product-meta">Num: 137460464 | Delivery within 15 days</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #8b9499;"></span>
                                 <span class="color-dot" style="background: #5ca6d6;"></span>
@@ -438,22 +429,22 @@
                                 <span class="color-dot" style="background: #f4d03f;"></span>
                                 <span>+11</span>
                             </div>
-                            <div class="product-price">14370 ₴</div>
+                            <div class="product-price">15500 ₴</div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
                     
-                    <!-- Product 9 with discount -->
+                    <!-- Product 9 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
-                            <span class="badge-discount">-15%</span>
+                            <span class="badge-discount">-9%</span>
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop" alt="Крісло-пуф Moony Balso 2072" class="product-image">
-                            <div class="product-title">Крісло-пуф Moony Balso 2072</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_mesa_corner_amber_80_01.jpg alt="Крісло-пуф Moony Balso 2072" class="product-image">
+                            <div class="product-title">Moony Balso 2072 pouf chair</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 92513185 | Закінчується</div>
+                            <div class="product-meta">Num: 92513185 | in stock</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #e8c5b5;"></span>
                                 <span class="color-dot" style="background: #c8b8a8;"></span>
@@ -462,21 +453,21 @@
                                 <span class="color-dot" style="background: #4a3c2e;"></span>
                                 <span>+10</span>
                             </div>
-                            <div class="product-price">5391 ₴ <span style="text-decoration: line-through; color: #999; font-size: 14px;">5890</span></div>
+                            <div class="product-price">13650 ₴ <span style="text-decoration: line-through; color: #999; font-size: 14px;">15000</span></div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
                     <!-- Product 10 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
-                            <span class="badge-discount">-15%</span>
+                            <span class="badge-discount">-35%</span>
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop" alt="Крісло-пуф Moony Balso 2072" class="product-image">
-                            <div class="product-title">Крісло-пуф Moony Balso 2072</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_mesa_corner_magic_beige_80_01.jpg alt="Крісло-пуф Moony Balso 2072" class="product-image">
+                            <div class="product-title">Moony Balso 2072 pouf chair</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 92513185 | Закінчується</div>
+                            <div class="product-meta">Num: 92513185 | Ends</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #e8c5b5;"></span>
                                 <span class="color-dot" style="background: #c8b8a8;"></span>
@@ -485,7 +476,7 @@
                                 <span class="color-dot" style="background: #4a3c2e;"></span>
                                 <span>+10</span>
                             </div>
-                            <div class="product-price">5391 ₴ <span style="text-decoration: line-through; color: #999; font-size: 14px;">5890</span></div>
+                            <div class="product-price">12285 ₴ <span style="text-decoration: line-through; color: #999; font-size: 14px;">18900</span></div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
@@ -493,21 +484,21 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop" alt="Крісло Uni Стальний" class="product-image">
-                            <div class="product-title">Крісло Uni Стальний</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_mesa_corner_estetica_martina_12_80_01.jpg alt="Крісло Uni Стальний" class="product-image">
+                            <div class="product-title">Uni Steel Chair</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 137460469 | Закінчується</div>
+                            <div class="product-meta">Num: 137460469 | in stock</div>
                             <div class="color-options">
-                                <span class="color-dot" style="background: #c8b8a8;"></span>
+                                <span class="color-dot" style="background: #c8b5a8;"></span>
                                 <span class="color-dot" style="background: #5ca6d6;"></span>
                                 <span class="color-dot" style="background: #1e3a5f;"></span>
                                 <span class="color-dot" style="background: #2b4d6f;"></span>
                                 <span class="color-dot" style="background: #f4d03f;"></span>
                                 <span>+11</span>
                             </div>
-                            <div class="product-price">14370 ₴</div>
+                            <div class="product-price">11300 ₴</div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
@@ -515,12 +506,12 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop" alt="Крісло Uni Стальний" class="product-image">
-                            <div class="product-title">Крісло Uni Стальний</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_mesa_corner_estetica_martina_15_80_01.jpg alt="Крісло Uni Стальний" class="product-image">
+                            <div class="product-title">Uni Steel Chair</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 137460469 | Закінчується</div>
+                            <div class="product-meta">Num: 137460469 | Ends</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #c8b8a8;"></span>
                                 <span class="color-dot" style="background: #5ca6d6;"></span>
@@ -529,7 +520,7 @@
                                 <span class="color-dot" style="background: #f4d03f;"></span>
                                 <span>+11</span>
                             </div>
-                            <div class="product-price">14370 ₴</div>
+                            <div class="product-price">12000 ₴</div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
@@ -537,12 +528,12 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop" alt="Крісло Uni Стальний" class="product-image">
-                            <div class="product-title">Крісло Uni Стальний</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_mesa_corner_grey_blue_80_01.jpg alt="Крісло Uni Стальний" class="product-image">
+                            <div class="product-title">Moony Balso 2072 pouf chair</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 137460469 | Закінчується</div>
+                            <div class="product-meta">Num: 137460469 | in stock</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #c8b8a8;"></span>
                                 <span class="color-dot" style="background: #5ca6d6;"></span>
@@ -551,7 +542,7 @@
                                 <span class="color-dot" style="background: #f4d03f;"></span>
                                 <span>+11</span>
                             </div>
-                            <div class="product-price">14370 ₴</div>
+                            <div class="product-price">11000 ₴</div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
@@ -559,12 +550,12 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop" alt="Крісло Uni Стальний" class="product-image">
-                            <div class="product-title">Крісло Uni Стальний</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_bjorn_antonio_lr_01.jpg alt="Крісло Uni Стальний" class="product-image">
+                            <div class="product-title">Armchair Uni Khaki</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 137460469 | Закінчується</div>
+                            <div class="product-meta">Num: 137460469 | in stock</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #c8b8a8;"></span>
                                 <span class="color-dot" style="background: #5ca6d6;"></span>
@@ -582,12 +573,12 @@
                         <div class="product-card">
                             <span class="badge-discount">-15%</span>
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop" alt="Крісло-пуф Moony Balso 2072" class="product-image">
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_bjorn_antonio_pl_01.jpg alt="Крісло-пуф Moony Balso 2072" class="product-image">
                             <div class="product-title">Крісло-пуф Moony Balso 2072</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 92513185 | Закінчується</div>
+                            <div class="product-meta">Num: 92513185 | Ends</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #e8c5b5;"></span>
                                 <span class="color-dot" style="background: #c8b8a8;"></span>
@@ -596,7 +587,7 @@
                                 <span class="color-dot" style="background: #4a3c2e;"></span>
                                 <span>+10</span>
                             </div>
-                            <div class="product-price">5391 ₴ <span style="text-decoration: line-through; color: #999; font-size: 14px;">5890</span></div>
+                            <div class="product-price">8500 ₴ <span style="text-decoration: line-through; color: #999; font-size: 14px;">10000</span></div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
@@ -604,12 +595,12 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop" alt="Крісло Uni Стальний" class="product-image">
-                            <div class="product-title">Крісло Uni Стальний</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_bjorn_antonio_ov_01.jpg alt="Крісло Uni Стальний" class="product-image">
+                            <div class="product-title">Moony Balso 2072 pouf chair</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 137460469 | Закінчується</div>
+                            <div class="product-meta">Num: 137460469 | Ends</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #c8b8a8;"></span>
                                 <span class="color-dot" style="background: #5ca6d6;"></span>
@@ -618,21 +609,21 @@
                                 <span class="color-dot" style="background: #f4d03f;"></span>
                                 <span>+11</span>
                             </div>
-                            <div class="product-price">14370 ₴</div>
+                            <div class="product-price">14000 ₴</div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
                     <!-- Product 17 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
-                            <span class="badge-discount">-15%</span>
+                            <span class="badge-discount">-20%</span>
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop" alt="Крісло Uni Стальний" class="product-image">
-                            <div class="product-title">Крісло Uni Стальний</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_bjorn_samuel_ov_01.jpg alt="Крісло Uni Стальний" class="product-image">
+                            <div class="product-title">Armchair Uni Khaki</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 137460469 | Закінчується</div>
+                            <div class="product-meta">Num: 137460469 | Ends</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #c8b8a8;"></span>
                                 <span class="color-dot" style="background: #5ca6d6;"></span>
@@ -641,7 +632,7 @@
                                 <span class="color-dot" style="background: #f4d03f;"></span>
                                 <span>+11</span>
                             </div>
-                            <div class="product-price">14370 ₴</div>
+                            <div class="product-price">11500 ₴ <span style="text-decoration: line-through; color: #999; font-size: 14px;">14380</span></div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
@@ -649,12 +640,12 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop" alt="Крісло Uni Стальний" class="product-image">
-                            <div class="product-title">Крісло Uni Стальний</div>
+                            <img src=https://stol-i-stul.com.ua/media/catalog/product/cache/2/small_image/212x/9df78eab33525d08d6e5fb8d27136e95/k/r/krislo_bjorn_samuel_kn_01.jpg alt="Крісло Uni Стальний" class="product-image">
+                            <div class="product-title">Armchair Uni Khaki</div>
                             <div class="product-rating">
                                 ★★★★★ 5
                             </div>
-                            <div class="product-meta">Арт: 137460469 | Закінчується</div>
+                            <div class="product-meta">Num: 137460469 | in stock</div>
                             <div class="color-options">
                                 <span class="color-dot" style="background: #c8b8a8;"></span>
                                 <span class="color-dot" style="background: #5ca6d6;"></span>
@@ -663,7 +654,7 @@
                                 <span class="color-dot" style="background: #f4d03f;"></span>
                                 <span>+11</span>
                             </div>
-                            <div class="product-price">14370 ₴</div>
+                            <div class="product-price">10000 ₴</div>
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
@@ -673,33 +664,7 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('sidebarOverlay');
-            sidebar.classList.toggle('show');
-            overlay.classList.toggle('show');
-        }
-        
-    // Знаходимо всі кнопки списку бажань
-    const wishlistButtons = document.querySelectorAll('.wishlist-btn');
-
-    wishlistButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const icon = this.querySelector('i');
-            
-            // Перемикаємо класи: якщо пусте - стане повним, і навпаки
-            if (icon.classList.contains('bi-heart')) {
-                icon.classList.remove('bi-heart');
-                icon.classList.add('bi-heart-fill');
-                this.style.color = 'red'; // Робимо червоним при активності
-            } else {
-                icon.classList.remove('bi-heart-fill');
-                icon.classList.add('bi-heart');
-                this.style.color = '#999'; // Повертаємо сірий колір
-            }
-        });
-    });
-</script>
+    <script src="js/script.js" defer></script>
+    <script src="js/translation.js" defer></script> <!-- Підключення скрипту перекладу -->
 </body>
 </html>
