@@ -7,27 +7,27 @@ const translations = {
         'nav-services': 'Послуги',
         'nav-furniture': 'Меблі',
         'nav-sofa': 'Дивани',
+        'nav-bed': 'Ліжко',
         'nav-armchair': 'Крісла',
+        'nav-wardrobe': 'Шафи',
+        'nav-bookshelf': 'Книжкові шафи',
         'nav-ottoman': 'Пуфи',
+        'nav-dresser': 'Комоди',
+        'nav-nightstand': 'Тумбочки',
         
+
         // Hero секція
         'hero-title': 'Зробіть свій інтер\'єр<br>мінімалістичним та сучасним',
         'hero-desc': 'Перетворіть свою кімнату на більш мінімалістичну та сучасну легко та швидко',
         'btn-shop': 'Купити зараз',
 
         // Сторінка каталогу
-        'page-title': 'Крісла та Пуфи',
+        'page-title': "М'якi крісла",
         'btn-filter-mobile': 'Показати фільтри',
         'btn-hide-filter': 'Сховати фільтр',
-        
-        // Верхня панель (Сортування)
-        'label-show': 'Відобразити:',
+        'label-all': 'Всі',
         'label-sort': 'Сортувати за:',
-        'opt-products': 'Товари',
-        'opt-default': 'Замовчуванням',
-        'opt-price-asc': 'Від дешевих',
-        'opt-price-desc': 'Від дорогих',
-        'label-per-page': 'На сторінці:',
+        'opt-products': 'На сторінці',
 
         // Сайдбар (Фільтри) - Заголовки
         'filter-title-types': 'Типи',
@@ -49,19 +49,28 @@ const translations = {
         // Сайдбар - Ціна та інше
         'price-from': 'від',
         'price-to': 'до',
-        'kind-pear': 'Крісло Груша',
         
         // Кольори
-        'color-beige': 'Бежевий',
         'color-white': 'Білий',
         'color-black': 'Чорний',
+        'color-pink': 'Рожевий',
+        'color-blue': 'Синій',
+        'color-yellow': 'Жовтий',
+        'color-green': 'Зелений',
+        'color-red': 'Червоний',
+        'color-orange': 'Оранжевий',
+        'color-gold': 'Золотий',
+        'color-purple': 'Фіолетовий',
         'color-grey': 'Сірий',
+        'color-brown': 'Коричневий',
+        'color-beige': 'Бежевий',
 
         // Картки товарів (Загальне)
         'status-ending': 'Закінчується',
-        'status-delivery': 'Під замовлення',
+        'status-delivery': 'в наявності',
         'badge-new': 'Новинка',
-        'badge-sale': 'Знижка'
+        'new-arrival': 'Доставка протягом 15 днів',
+        'new-season': 'Доставка протягом 7 робочих днів',
     },
     'en': {
         // Navigation
@@ -79,18 +88,13 @@ const translations = {
         'btn-shop': 'Shop Now',
 
         // Catalog Page
-        'page-title': 'Armchairs & Bean Bags',
+        'page-title': 'Armchairs',
         'btn-filter-mobile': 'Show Filters',
         'btn-hide-filter': 'Hide Filter',
-
-        // Top Bar (Sorting)
-        'label-show': 'Show:',
+        'label-all': 'All',
         'label-sort': 'Sort by:',
-        'opt-products': 'Products',
-        'opt-default': 'Default',
-        'opt-price-asc': 'Price: Low to High',
-        'opt-price-desc': 'Price: High to Low',
-        'label-per-page': 'Per page:',
+        'opt-products': 'On the page',
+        
 
         // Sidebar (Filters) - Titles
         'filter-title-types': 'Types',
@@ -112,19 +116,28 @@ const translations = {
         // Sidebar - Price & Misc
         'price-from': 'from',
         'price-to': 'to',
-        'kind-pear': 'Pear Chair',
 
         // Colors
-        'color-beige': 'Beige',
         'color-white': 'White',
         'color-black': 'Black',
-        'color-grey': 'Grey',
+        'color-pink': 'Pink',
+        'color-blue': 'Blue',
+        'color-yellow': 'Yellow',
+        'color-green': 'Green',
+        'color-red': 'Red',
+        'color-orange': 'Orange',
+        'color-gold': 'Gold',
+        'color-purple': 'Purple',
+        'color-grey': 'Gray',
+        'color-brown': 'Brown',
+        'color-beige': 'Beige',
 
         // Product Cards (General)
-        'status-ending': 'Ending soon',
-        'status-delivery': 'On order',
+        'status-ending': 'Ends',
+        'status-delivery': 'in stock',
         'badge-new': 'New',
-        'badge-sale': 'Sale'
+        'new-arrival': 'Delivery within 15 days',
+        'new-season': 'Delivery within 7 working days',
     }
 };
 
