@@ -190,6 +190,29 @@ ul {
     background-color: #d35400; /* Колір фону при наведенні */
 }
 
+/* кнопка для перекладу */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 20px;
+    color: white; /* Або чорний, залежно від фону */
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0;
+}
+
+.lang-btn.active, .lang-btn:hover {
+    color: #fff; /* Активний колір */
+    text-decoration: underline;
+}
 
 
 
