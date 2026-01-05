@@ -79,7 +79,10 @@ const translations = {
         'nav-services': 'Services',
         'nav-furniture': 'Furniture',
         'nav-sofa': 'Sofa',
+        'nav-bed': 'Bed',
         'nav-armchair': 'Armchair',
+        'nav-wardrobe': 'Wardrobe',
+        'nav-bookshelf': 'Bookshelf',
         'nav-ottoman': 'Ottoman',
 
         // Hero Section

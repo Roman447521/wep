@@ -122,6 +122,10 @@ ul {
     min-width: 100px;
     border-radius: 20px;
     background-color: rgba(30, 30, 30, 0.9);
+
+    left: 50%;                    /* Зсув лівого краю на центр батька */
+    transform: translateX(-50%); /* Зсув самого елемента назад на половину його ширини */
+    
   }
   
 

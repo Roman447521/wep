@@ -104,6 +104,11 @@ ul {
     min-width: 100px;
     border-radius: 20px;
     background-color: rgba(30, 30, 30, 0.9);
+    
+    
+    left: 50%;                    /* Зсув лівого краю на центр батька */
+    transform: translateX(-50%);  /* Зсув самого елемента назад на половину його ширини */
+   
 }
 
 .dropdown-content a {
@@ -126,7 +131,6 @@ ul {
 .dropdown:hover .dropbtn {
     background-color: #e08e0b;
 }
-
 /* ============= HERO SECTION =============== */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/фон\ .png');
@@ -448,6 +452,126 @@ body {
     text-decoration: underline;
 }
 
+/* ======================== СТИЛІ ДЛЯ FOOTER (ПІДВАЛУ САЙТУ) ===================================== */
+.footer {
+    background-color: #2c3e50; /* Темний фон підвалу */
+    color: #bdc3c7; /* Світло-сірий колір тексту */
+    padding: 60px 0 20px; /* Внутрішні відступи */
+}
+
+.footer-grid {
+    display: grid; /* Використання Grid */
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* Чотири колонки різної ширини */
+    gap: 40px; /* Відстань між колонками */
+    margin-bottom: 40px; /* Відступ знизу */
+}
+
+.footer-col .logo {
+    color: #fff; /* Білий колір логотипу */
+    display: inline-block; /* Робить лого блочно-рядковим */
+    margin-bottom: 20px; /* Відступ знизу */
+}
+
+.footer-col h4 {
+    color: #fff; /* Білий колір заголовків */
+    font-size: 18px; /* Розмір шрифту */
+    margin-bottom: 20px; /* Відступ знизу */
+}
+
+.footer-col ul li {
+    margin-bottom: 10px; /* Відступ між пунктами списку */
+}
+
+.footer-col ul li a {
+    color: #bdc3c7; /* Колір посилань */
+    transition: color 0.3s ease; /* Плавний перехід кольору */
+}
+
+.footer-col ul li a:hover {
+    color: #fff; /* Колір посилань при наведенні */
+}
+
+/* Нижня частина підвалу */
+.footer-bottom {
+    border-top: 1px solid #34495e; /* Лінія-розділювач */
+    padding-top: 20px; /* Відступ зверху */
+    display: flex; /* Використання Flexbox */
+    justify-content: space-between; /* Розподілення елементів по краях */
+    align-items: center; /* Вирівнювання по центру */
+    font-size: 14px; /* Розмір шрифту */
+}
+
+.footer-bottom a {
+    margin-left: 20px; /* Відступ між посиланнями */
+}
+
+
+
+/* ================= ПАГІНАЦІЯ (СТОРІНКИ) ================= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 40px 0;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination-btn {
+    background: #4a5568;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-btn:hover {
+    background: #2d3748;
+    transform: translateY(-2px);
+}
+
+.pagination-btn.active {
+    background: #2d3a52;
+    color: #f89d49;
+}
+
+.pagination-btn.dots {
+    background: transparent;
+    color: #9ca3af;
+    cursor: default;
+}
+
+.pagination-btn.dots:hover {
+    background: transparent;
+    transform: none;
+}
+
+/* Адаптація пагінації для мобільних */
+@media (max-width: 576px) {
+    .pagination {
+        gap: 6px;
+        margin: 20px 0;
+        padding: 15px 10px;
+    }
+    
+    .pagination-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+        min-width: 38px;
+        height: 38px;
+        border-radius: 6px;
+    }
+}
 /* ================= АДАПТАЦІЯ ДЛЯ ПЛАНШЕТІВ ================= */
 @media (max-width: 992px) {
     .main-nav ul {
@@ -741,4 +865,49 @@ body {
     .filter-item {
         padding: 5px 0;
     }
+
+    /* FOOTER */
+    .footer {
+        padding: 40px 0 18px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-col .logo {
+        display: block;
+        margin-bottom: 15px;
+    }
+    
+    .footer-col h4 {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+    
+    .footer-col ul li {
+        margin-bottom: 10px;
+    }
+    
+    .footer-col ul li a {
+        font-size: 14px;
+    }
+    
+    .footer-bottom {
+        font-size: 12px;
+        padding-top: 18px;
+    }
+    
+    .footer-bottom div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .footer-bottom a {
+        margin: 0;
+    }
 }
+
