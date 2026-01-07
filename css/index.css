@@ -153,7 +153,7 @@ ul {
 
 /* ============= СТИЛІ ДЛЯ HERO SECTION (ГОЛОВНОЇ СЕКЦІЇ) =============== */
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('../images/1441.png'); /* Фонове зображення з затемненням */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('../images/main_background.png'); /* Фонове зображення з затемненням */
     height: 250%; /*Висота секції на весь екран */
     background-size: cover; /* Зображення покриває всю доступну площу */
     background-position: center; /* Центрує фонове зображення */
