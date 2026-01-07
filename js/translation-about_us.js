@@ -16,9 +16,9 @@ const translations = {
         "who-text-2": "Ми особисто контролюємо кожну колекцію — від ідеї та дизайну до матеріалів і деталей.",
 
         // FOUNDERS
-        "founder1-name": "Alex Morgan",
+       
         "founder1-desc": "Співзасновник та креативний директор<br>10+ років у дизайні меблів.",
-        "founder2-name": "Daniel Wright",
+        
         "founder2-desc": "Співзасновник та операційний директор<br>Експерт з матеріалів і виробництва.",
 
         // OFFER
@@ -54,9 +54,9 @@ const translations = {
         "who-text-2": "We personally oversee every collection — from concept to final details.",
 
         // FOUNDERS
-        "founder1-name": "Alex Morgan",
+        
         "founder1-desc": "Co-Founder & Creative Director<br>10+ years in furniture design.",
-        "founder2-name": "Daniel Wright",
+        
         "founder2-desc": "Co-Founder & Operations Lead<br>Expert in materials and production.",
 
         // OFFER
