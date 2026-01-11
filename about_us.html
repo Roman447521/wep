@@ -18,10 +18,21 @@
             <nav class="main-nav">
                 <a href="index.html" class="logo">Furni.</a>
 
-                <ul>
-                    <li><a href="index.html" data-key="nav-home">Home</a></li>
-                    <li><a href="about_us.html" class="active" data-key="nav-about">About Us</a></li>
-                    <li><a href="services.html" data-key="nav-services">Services</a></li>
+                <ul> <!-- Список навігаційних посилань -->
+                    <li><a href="index.html" data-key="nav-home">Home</a></li> <!-- Посилання на головну -->
+                    <li><a href="about_us.html" data-key="nav-about">About Us  </a></li> <!-- Про нас -->
+                    <li><a href="services.html" data-key="nav-services">Services</a></li> <!-- Послуги -->
+                    <div class="dropdown"> <!-- Випадаюче меню для мобільної версії -->
+                        <button class="dropbtn" data-key="nav-furniture">Furniture</button> 
+                        <div class="dropdown-content">
+                          <a href="sofa.html" data-key="nav-sofa">Sofa</a>
+                          <a href="bed.html" data-key="nav-bed">Bed</a>
+                          <a href="armchair.html" data-key="nav-chair">Armchair</a>
+                          <a href="wardrobe.html" data-key="nav-wardrobe">Wardrobe</a>
+                          <a href="bookshelf.html" data-key="nav-bookshelf">Bookshelf</a>
+                          <a href="ottoman.html" data-key="nav-ottoman">Ottoman</a>
+                        </div>
+                      </div>
                 </ul>
 
                 <div class="nav-icons">
