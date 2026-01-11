@@ -1,27 +1,27 @@
-<!DOCTYPE html> <!-- Вказує браузеру, що це HTML5 документ -->
-<html lang="uk"> <!-- Мова сторінки — українська -->
+<!DOCTYPE html>
+<html lang="uk">
 <head>
-    <meta charset="UTF-8"> <!-- Підтримка українських символів -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптивність для мобільних пристроїв -->
-    <title >Furni - Minimalistic & Modern</title> <!-- Назва сайту, що відображається на вкладці браузера -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Furni - Minimalistic & Modern</title>
     
-    <link rel="stylesheet" href="css/index.css"> <!-- Підключення CSS-файлу для стилів -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Іконки Font Awesome -->
-    <link rel="icon" type="image/x-icon" href="ico/favicon 2.ico"> <!-- Іконка сайту на вкладці браузера -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="ico/favicon 2.ico">
 </head>
 
-<body> <!-- Основна частина сторінки -->
+<body>
 
-    <!-- ====== ШАПКА САЙТУ ====== -->
-    <header class="header"> <!-- Тег для верхньої частини сайту -->
-        <div class="container"> <!-- Обгортка для вирівнювання контенту -->
-            <nav class="main-nav"> <!-- Головне меню навігації -->
-                <a href="index.html" class="logo">Furni.</a> <!-- Логотип сайту -->
-                <ul> <!-- Список навігаційних посилань -->
-                    <li><a href="index.html" data-key="nav-home">Home</a></li> <!-- Посилання на головну -->
-                    <li><a href="about_us.html" data-key="nav-about">About Us  </a></li> <!-- Про нас -->
-                    <li><a href="services.html" data-key="nav-services">Services</a></li> <!-- Послуги -->
-                    <div class="dropdown"> <!-- Випадаюче меню для мобільної версії -->
+    <!-- ====== HEADRER ====== -->
+    <header class="header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="index.html" class="logo">Furni.</a>
+                <ul> <!-- Navigation links list -->
+                    <li><a href="index.html" data-key="nav-home">Home</a></li> <!-- Link to home page -->
+                    <li><a href="about_us.html" data-key="nav-about">About Us  </a></li> <!-- About us section link -->
+                    <li><a href="services.html" data-key="nav-services">Services</a></li> <!-- Services link -->
+                    <div class="dropdown"> <!-- Dropdown menu for mobile version -->
                         <button class="dropbtn" data-key="nav-furniture">Furniture</button> 
                         <div class="dropdown-content">
                           <a href="sofa.html" data-key="nav-sofa">Sofa</a>
@@ -33,9 +33,9 @@
                         </div>
                       </div>
                 </ul>
-                <div class="nav-icons"> <!-- Блок іконок справа у меню -->
-                    <a href="user.html"><i class="fas fa-user"></i></a> <!-- Іконка користувача -->
-                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a> <!-- Іконка кошика -->
+                <div class="nav-icons"> <!-- Icon block on the right side of the menu -->
+                    <a href="user.html"><i class="fas fa-user"></i></a> <!-- User icon -->
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a> <!-- Cart icon -->
                     <div class="lang-switch" style="display: flex; gap: 5px; color: white; margin-left: 20px;">
                         <button onclick="setLanguage('ua')" class="lang-btn" style="background:none; border:none; color:inherit; cursor:pointer; font-weight:600;">UA</button>
                         <span>|</span>
@@ -46,54 +46,54 @@
         </div>
     </header>
 
-    <main> <!-- Основна частина сайту -->
-
-        <!-- ====== ГОЛОВНИЙ БАНЕР (Hero) ====== -->
-        <section class="hero"> <!-- Великий банер із заголовком -->
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <!-- ====== HERO ====== -->
+        <section class="hero">
             <div class="container">
-                <div class="hero-content"> <!-- Текст у банері -->
-                    <h1 data-key='hero-title'>Make Your Interior More<br>Minimalistic & Modern</h1> <!-- Головний заголовок -->
-                    <p data-key="hero-desc">Turn your room into a lot more minimal and modern with ease and speed</p> <!-- Підзаголовок -->
-                    <a href="#" class="btn" data-key="btn-shop">Shop Now</a> <!-- Кнопка "Shop Now" --> 
+                <div class="hero-content">
+                    <h1 data-key='hero-title'>Make Your Interior More<br>Minimalistic & Modern</h1>
+                    <p data-key="hero-desc">Turn your room into a lot more minimal and modern with ease and speed</p>
+                    <a href="#" class="btn" data-key="btn-shop">Shop Now</a>
                 </div>
             </div>
         </section>
 
-        <!-- ====== ПЕРЕВАГИ ====== -->
-        <section class="features-section"> <!-- Секція з перевагами -->
-            <div class="container"> <!-- Контейнер Bootstrap -->
-                <div class="text-center mb-5"> <!-- Заголовок по центру -->
-                    <h2 class="section-title" data-key="features-title">Why Choosing Us</h2> <!-- Назва секції -->
+        <!-- ====== ADVANTAGES ====== -->
+        <section class="features-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title" data-key="features-title">Why Choosing Us</h2>
                 </div>
         
-                <div class="row g-4"> <!-- Рядок з відступами між колонками -->
+                <div class="row g-4">
         
-                    <div class="col-md-4"> <!-- Колонка 1 -->
-                        <div class="feature-card"> <!-- Картка переваги -->
-                            <div class="feature-icon"> <!-- Іконка -->
-                                <i class="fas fa-shipping-fast"></i> <!-- Іконка доставки -->
+                    <div class="col-md-4"> <!-- Column 1 -->
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-shipping-fast"></i>
                             </div>
                             <h4 data-key="feat-1-title">Luxury Facilities</h4> <!-- Назва переваги -->
                             <p data-key="feat-1-desc">The advantage of hiring a workspace with us is that gives you comfortable service and all-around facilities.</p> <!-- Опис -->
                         </div>
                     </div>
         
-                    <div class="col-md-4"> <!-- Колонка 2 -->
-                        <div class="feature-card"> <!-- Картка переваги -->
-                            <div class="feature-icon"> <!-- Іконка -->
-                                <i class="fas fa-dollar-sign"></i> <!-- Іконка ціни -->
+                    <div class="col-md-4"> <!-- Column 2 -->
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-dollar-sign"></i>
                             </div>
                             <h4 data-key="feat-2-title">Affordable Price</h4> <!-- Назва переваги -->
                             <p data-key="feat-2-desc">You can get a workspace at an affordable price according to your pocket and services.</p> <!-- Опис -->
                         </div>
                     </div>
         
-                    <div class="col-md-4"> <!-- Колонка 3 -->
-                        <div class="feature-card"> <!-- Картка переваги -->
-                            <div class="feature-icon"> <!-- Іконка -->
-                                <i class="fas fa-users"></i> <!-- Іконка користувачів -->
+                    <div class="col-md-4"> <!-- Column 3 -->
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
                             </div>
-                            <h4 data-key="feat-3-title">Many Choices</h4> <!-- Назва переваги -->
+                            <h4 data-key="feat-3-title">Many Choices</h4>
                             <p data-key="feat-3-desc">We provide many unique work space choices so that you can choose the workspace to your liking.</p> <!-- Опис -->
                         </div>
                     </div>
@@ -102,29 +102,29 @@
             </div>
         </section>
         
-        <!-- ====== КАТАЛОГ ТОВАРІВ ====== -->
+        <!-- ====== PRODUCT CATALOG ====== -->
         <section class="best-selling">
             <div class="container">
-                <h2 data-key="bestsell-title">Best Selling Product</h2> <!-- Заголовок секції -->
-                <div class="product-tabs"> <!-- Кнопки для вибору категорій товарів -->
+                <h2 data-key="bestsell-title">Best Selling Product</h2>
+                <div class="product-tabs">
                     <button class="tab-btn active" onclick="openTab(event, 'chair-content')" data-key="tab-chair">Chair</button>
                     <button class="tab-btn" onclick="openTab(event, 'beds-content')" data-key="tab-beds">Beds</button>
                     <button class="tab-btn" onclick="openTab(event, 'sofa-content')" data-key="tab-sofa">Sofa</button>
                     <button class="tab-btn" onclick="openTab(event, 'lamp-content')" data-key="tab-lamp">Lamp</button>
                 </div>
 
-                <div id="chair-content" class="tab-content active"> <!-- Вміст для категорії "Chair" -->
-                    <div class="product-grid"> <!-- Сітка товарів -->
-                        <!-- перший товар -->
+                <div id="chair-content" class="tab-content active"> <!-- Content for category "Chair" -->
+                    <div class="product-grid"> <!-- product grid -->
+                        <!-- product 1 -->
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="images/armchair_1.png" alt="Curtain Arm Chair">  <!-- Зображення товару -->
+                                <img src="images/armchair_1.png" alt="Curtain Arm Chair">
                             </div> 
-                            <h3>Curtain Arm Chair</h3> <!-- Назва товару -->
-                            <p class="price">$ 120</p> <!-- Ціна товару -->
-                            <a href="#" class="add-to-cart">+</a> <!-- Кнопка додавання в кошик -->
+                            <h3>Curtain Arm Chair</h3>
+                            <p class="price">$ 120</p>
+                            <a href="#" class="add-to-cart">+</a>
                         </div>
-                        <!-- другий товар -->
+                        <!-- product 2 -->
                         <div class="product-card">
                             <div class="product-image">
                                 <img src="images/armchair_3.png" alt="Concept Chair">
@@ -133,7 +133,7 @@
                             <p class="price">$ 180</p>
                             <a href="#" class="add-to-cart">+</a>
                         </div>
-                        <!-- третій товар -->
+                        <!-- product 3 -->
                         <div class="product-card">
                             <div class="product-image">
                                 <img src="images/armchair_2.png" alt="Aulis Chair">
@@ -142,7 +142,7 @@
                             <p class="price">$ 200</p>
                             <a href="#" class="add-to-cart">+</a>
                         </div>
-                        <!-- четвертий товар -->
+                        <!-- product 4 -->
                         <div class="product-card">
                             <div class="product-image">
                                 <img src="images/armchair_4.png" alt="Armchair Patch">
@@ -154,18 +154,18 @@
                     </div>
                 </div>
 
-                <div id="beds-content" class="tab-content">  <!-- Вміст для категорії "Bed" -->
-                    <div class="product-grid"> <!-- Сітка товарів -->
-                        <!-- перший товар -->
+                <div id="beds-content" class="tab-content">  <!-- Content for category "Bed" -->
+                    <div class="product-grid"> <!-- product grid -->
+                        <!-- product 1 -->
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="images/bed_1.png" alt="Curtain Arm Chair">  <!-- Зображення товару -->
+                                <img src="images/bed_1.png" alt="Curtain Arm Chair">
                             </div> 
-                            <h3>Soft bed Mila from Galicia</h3> <!-- Назва товару -->
-                            <p class="price">$ 290</p> <!-- Ціна товару -->
-                            <a href="#" class="add-to-cart">+</a> <!-- Кнопка додавання в кошик -->
+                            <h3>Soft bed Mila from Galicia</h3>
+                            <p class="price">$ 290</p>
+                            <a href="#" class="add-to-cart">+</a>
                         </div>
-                        <!-- другий товар -->
+                        <!-- product 2 -->
                         <div class="product-card">
                             <div class="product-image">
                                 <img src="images/bed_2.png" alt="Concept Chair">
@@ -174,7 +174,7 @@
                             <p class="price">$ 380</p>
                             <a href="#" class="add-to-cart">+</a>
                         </div>
-                        <!-- третій товар -->
+                        <!-- product 3 -->
                         <div class="product-card">
                             <div class="product-image">
                                 <img src="images/bed_3.png" alt="Aulis Chair">
@@ -183,7 +183,7 @@
                             <p class="price">$ 450</p>
                             <a href="#" class="add-to-cart">+</a>
                         </div>
-                        <!-- четвертий товар -->
+                        <!-- product 4 -->
                         <div class="product-card">
                             <div class="product-image">
                                 <img src="images/bed_4.png" alt="Armchair Patch">
@@ -195,18 +195,18 @@
                     </div>
                 </div>
 
-                <div id="sofa-content" class="tab-content">  <!-- Вміст для категорії "диван " -->
-                    <div class="product-grid"> <!-- Сітка товарів -->
-                        <!-- перший товар -->
+                <div id="sofa-content" class="tab-content">  <!-- Content for category "Sofa" -->
+                    <div class="product-grid"> <!-- product grid -->
+                        <!-- product 1 -->
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="images/sofa_1.png" alt="Curtain Arm Chair">  <!-- Зображення товару -->
+                                <img src="images/sofa_1.png" alt="Curtain Arm Chair">
                             </div> 
-                            <h3> Sofa Chair</h3> <!-- Назва товару -->
-                            <p class="price">$ 150</p> <!-- Ціна товару -->
-                            <a href="#" class="add-to-cart">+</a> <!-- Кнопка додавання в кошик -->
+                            <h3> Sofa Chair</h3>
+                            <p class="price">$ 150</p>
+                            <a href="#" class="add-to-cart">+</a>
                         </div>
-                        <!-- другий товар -->
+                        <!-- product 2 -->
                         <div class="product-card">
                             <div class="product-image">
                                 <img src="images/sofa_2.png" alt="Concept Chair">
@@ -215,7 +215,7 @@
                             <p class="price">$ 180</p>
                             <a href="#" class="add-to-cart">+</a>
                         </div>
-                        <!-- третій товар -->
+                        <!-- product 3 -->
                         <div class="product-card">
                             <div class="product-image">
                                 <img src="images/sofa_3.png" alt="Aulis Chair">
@@ -224,7 +224,7 @@
                             <p class="price">$ 230</p>
                             <a href="#" class="add-to-cart">+</a>
                         </div>
-                        <!-- четвертий товар -->
+                        <!-- product 4 -->
                         <div class="product-card">
                             <div class="product-image">
                                 <img src="images/sofa_4.png" alt="Armchair Patch">
@@ -236,18 +236,18 @@
                     </div>
                 </div>
 
-                <div id="lamp-content" class="tab-content">  <!-- Вміст для категорії "лампа" -->
-                    <div class="product-grid"> <!-- Сітка товарів -->
-                        <!-- перший товар -->
+                <div id="lamp-content" class="tab-content">  <!-- Content for category "Lamp" -->
+                    <div class="product-grid"> <!-- product grid -->
+                        <!-- product 1 -->
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="images/lamp_1.png" alt="Curtain Arm Chair">  <!-- Зображення товару -->
+                                <img src="images/lamp_1.png" alt="Curtain Arm Chair">
                             </div> 
-                            <h3>Curtain Arm </h3> <!-- Назва товару -->
-                            <p class="price">$ 320</p> <!-- Ціна товару -->
-                            <a href="#" class="add-to-cart">+</a> <!-- Кнопка додавання в кошик -->
+                            <h3>Curtain Arm </h3>
+                            <p class="price">$ 320</p>
+                            <a href="#" class="add-to-cart">+</a>
                         </div>
-                        <!-- другий товар -->
+                        <!-- product 2 -->
                         <div class="product-card">
                             <div class="product-image">
                                 <img src="images/lamp_2.png" alt="Concept Chair">
@@ -256,7 +256,7 @@
                             <p class="price">$ 450</p>
                             <a href="#" class="add-to-cart">+</a>
                         </div>
-                        <!-- третій товар -->
+                        <!-- product 3 -->
                         <div class="product-card">
                             <div class="product-image">
                                 <img src="images/lamp_3.png" alt="Aulis Chair">
@@ -265,7 +265,7 @@
                             <p class="price">$ 230</p>
                             <a href="#" class="add-to-cart">+</a>
                         </div>
-                        <!-- четвертий товар -->
+                        <!-- product 4 -->
                         <div class="product-card">
                             <div class="product-image">
                                 <img src="images/lamp_4.png" alt="Armchair Patch">
@@ -282,7 +282,7 @@
             
         </section>
 
-        <!-- ====== ДОСВІД ТА ЯКІСТЬ ====== -->
+        <!-- ====== EXPERIENCE AND QUALITY ====== -->
         <section class="experience">
             <div class="container">
                 <div class="experience-content">
@@ -298,7 +298,7 @@
             </div>
         </section>
 
-        <!-- ====== ВИРОБНИЦТВО / МАТЕРІАЛИ ====== -->
+        <!-- ====== PRODUCTION / MATERIALS ====== -->
          <section class="process">
             <div class="container">
                 <div class="process-content">
@@ -316,29 +316,29 @@
             </div>
         </section>
 
-        <!-- ====== ВІДГУКИ КЛІЄНТІВ ====== -->
-         <P id="Testimonials"></P> <!-- Якір для посилання на секцію відгуки -->
+        <!-- ====== CLIENT REWIEWS ====== -->
+         <P id="Testimonials"></P>
         <h2 class="our" data-key="reviews-title">Our Client Reviews</h2> 
         <section class="testimonials-gallery">
             <button class="arrow prev-arrow" aria-label="Попередній відгук">
                &larr;
             </button>
            
-            <!-- КАРТОЧКA ВІДГУКУ 1 -->
+            <!-- REWIEW CARD 1 -->
            <div class="testimonial-card">  
-               <div class="card-image-wrapper"> <!-- Обгортка для зображення в картці відгуку -->
+               <div class="card-image-wrapper">
                    <img src="images/interior_3.png" alt="Bang Upin" class="card-image">
                </div>
-               <div class="testimonial-content"> <!-- Контент відгуку -->
-                   <div class="avatar-wrapper"> <!-- Обгортка для аватара -->
+               <div class="testimonial-content">
+                   <div class="avatar-wrapper">
                        <img src="images/avatar_1.png" alt="Bang Upin avatar" class="avatar"> <!-- Аватар -->
                    </div>
-                   <h4 class="client-name">Ina Mpok</h4> <!-- Ім'я клієнта -->
-                   <p class="client-title">London, UK</p> <!-- Місто та країна -->
+                   <h4 class="client-name">Ina Mpok</h4>
+                   <p class="client-title">London, UK</p>
                    <blockquote class="client-quote">
                        "Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal"
                    </blockquote>
-                   <div class="rating"> <!-- Рейтинг зірочками -->
+                   <div class="rating">
                        <span class="star filled">&#9733;</span>
                        <span class="star filled">&#9733;</span>
                        <span class="star filled">&#9733;</span>
@@ -347,7 +347,7 @@
                </div>
            </div>
 
-           <!-- КАРТОЧКA ВІДГУКУ 2 -->
+           <!-- REWIEW CARD 2 -->
            <div class="testimonial-card">
                <div class="card-image-wrapper">
                    <img src="images/interior_1.png" alt="Ibuk Sukijan" class="card-image">
@@ -370,7 +370,7 @@
                </div>
            </div>
 
-           <!-- КАРТОЧКA ВІДГУКУ 3 -->
+           <!-- REWIEW CARD 3 -->
            <div class="testimonial-card">
                <div class="card-image-wrapper">
                    <img src="images/interior_2.png" alt="Mpok Ina" class="card-image">
@@ -393,7 +393,7 @@
                </div>
            </div>
 
-           <!-- КАРТОЧКA ВІДГУКУ 4 -->
+           <!-- REWIEW CARD 4 -->
            <div class="testimonial-card">
                <div class="card-image-wrapper">
                    <img src="images/interior_4.png" alt="John Doe" class="card-image"> </div>
@@ -414,7 +414,7 @@
                </div>
            </div>
 
-           <!-- КАРТОЧКA ВІДГУКУ 5 -->
+           <!-- REWIEW CARD 5 -->
            <div class="testimonial-card">
                <div class="card-image-wrapper">
                    <img src="images/interior_5.png" alt="John Doe" class="card-image"> </div>
@@ -435,7 +435,7 @@
                </div>
            </div>
 
-              <!-- КАРТОЧКA ВІДГУКУ 6 -->
+              <!-- REWIEW CARD 6 -->
            <div class="testimonial-card">
             <div class="card-image-wrapper">
                 <img src="images/interior_6.png" alt="John Doe" class="card-image"> </div>
@@ -456,7 +456,7 @@
             </div>
         </div>
         
-           <!-- КАРТОЧКA ВІДГУКУ 7 -->
+           <!-- REWIEW CARD 7 -->
            <div class="testimonial-card">
                <div class="card-image-wrapper">
                    <img src="images/interior_7.png" alt="Jane Smith" class="card-image"> </div>
@@ -484,12 +484,12 @@
 
     </main>
 
-    <!-- ====== ПІДВАЛ САЙТУ ====== -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid"> <!-- 4 колонки з інформацією -->
+            <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="#" class="logo">Furni.</a> <!-- Логотип -->
+                    <a href="#" class="logo">Furni.</a>
                     <p data-key="foot-desc">The advantage of hiring a workspace with us is that givees you comfortable service.</p>
                 </div>
                 <div class="footer-col">
@@ -517,8 +517,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom"> <!-- Нижня частина підвалу -->
-                <p>&copy; 2026 Furni. All rights reserved.</p> <!-- Авторські права -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Furni. All rights reserved.</p>
                 <div>
                     <a href="#">Terms & Conditions</a>
                     <a href="#">Privacy Policy</a>
@@ -527,8 +527,9 @@
         </div>
     </footer>
 
-    <script src="js/script.js" defer></script> <!-- Підключення JavaScript-файлу з відкладеним завантаженням -->
-    <script src="js/translation-index.js" defer></script> <!-- Підключення скрипту перекладу -->
+    <!-- ===== SCRIPTS ===== -->
+    <script src="js/script.js" defer></script>
+    <script src="js/translation-index.js" defer></script>
 
 </body>
 </html>

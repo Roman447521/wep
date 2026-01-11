@@ -13,16 +13,17 @@
 </head>
 
 <body>
-    <!-- ====== ШАПКА САЙТУ ====== -->
-    <header class="header2"> <!-- Тег для верхньої частини сайту -->
-        <div class="container2"> <!-- Обгортка для вирівнювання контенту -->
-            <nav class="main-nav"> <!-- Головне меню навігації -->
+
+    <!-- ===== HEADER ===== -->
+    <header class="header2">
+        <div class="container2">
+            <nav class="main-nav">
                 <a href="index.html" class="logo">Furni.</a> <!-- Логотип сайту -->
-                <ul> <!-- Список навігаційних посилань -->
-                    <li><a href="index.html" data-key="nav-home">Home</a></li> <!-- Посилання на головну -->
-                    <li><a href="about us.html" data-key="nav-about">About Us</a></li> <!-- Про нас -->
-                    <li><a href="services.html" data-key="nav-services">Services</a></li> <!-- Послуги -->
-                    <div class="dropdown"> <!-- Випадаюче меню для мобільної версії -->
+                <ul> <!-- Navigation links list -->
+                    <li><a href="index.html" data-key="nav-home">Home</a></li> <!-- Link to home page -->
+                    <li><a href="about us.html" data-key="nav-about">About Us</a></li> <!-- About us section link -->
+                    <li><a href="services.html" data-key="nav-services">Services</a></li> <!-- Services link -->
+                    <div class="dropdown"> <!-- Dropdown menu for mobile version -->
                         <button class="dropbtn" data-key="nav-furniture">Furniture</button> 
                         <div class="dropdown-content">
                           <a href="sofa.html" data-key="nav-sofa">Sofa</a>
@@ -35,9 +36,9 @@
                       </div>
                 </ul>
                 
-                <div class="nav-icons"> <!-- Блок іконок справа у меню -->
-                    <a href="user.html"><i class="fas fa-user"></i></a> <!-- Іконка користувача -->
-                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a> <!-- Іконка кошика -->
+                <div class="nav-icons">
+                    <a href="user.html"><i class="fas fa-user"></i></a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
                     <div class="lang-switch" style="display: flex; gap: 5px; color: white; margin-left: 20px;">
                         <button onclick="setLanguage('ua')" class="lang-btn" style="background:none; border:none; color:inherit; cursor:pointer; font-weight:600;">UA</button>
                         <span>|</span>
@@ -48,26 +49,27 @@
         </div>
     </header>
 
-    <main> <!-- Основна частина сайту -->
-
-        <!-- ====== ГОЛОВНИЙ БАНЕР (Hero) ====== -->
-        <section class="hero"> <!-- Великий банер із заголовком -->
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <!-- ====== HERO ====== -->
+        <section class="hero">
             <div class="container2">
-                <div class="hero-content"> <!-- Текст у банері -->
-                    <h1 data-key="hero-title">Make Your Interior More<br>Minimalistic & Modern</h1> <!-- Головний заголовок -->
-                    <p data-key="hero-desc">Turn your room into a lot more minimal and modern with ease and speed</p> <!-- Підзаголовок -->
-                    <a href="#" class="btn2" data-key="btn-shop">Shop Now</a> <!-- Кнопка "Shop Now" --> 
+                <div class="hero-content">
+                    <h1 data-key="hero-title">Make Your Interior More<br>Minimalistic & Modern</h1>
+                    <p data-key="hero-desc">Turn your room into a lot more minimal and modern with ease and speed</p>
+                    <a href="#" class="btn2" data-key="btn-shop">Shop Now</a>
                 </div>
             </div>
         </section>
     </main>
-<!-- ====== КОНТЕНТНА ЧАСТИНА СТОРІНКИ ====== -->
+
     <div class="header">
         <div class="container">
             <h1 data-key="page-title">Bookshelf</h1>
         </div>
     </div>
     
+    <!-- ====== FILTERS ====== -->
     <div class="container mt-4">
         <button class="btn btn-dark mobile-filter-toggle" onclick="toggleSidebar()">
             <i class="bi bi-funnel" data-key="btn-filter-mobile">Show filters</i> 
@@ -95,7 +97,6 @@
                 </div>
             </div>
         </div>
-        <!-- типи-->
         <div class="row">
             <div class="col-md-3">
                 <div class="sidebar" id="sidebar">
@@ -103,6 +104,7 @@
                         <i class="bi bi-x-lg"></i>
                     </div>
                     
+                     <!-- types -->
                     <div class="filter-group">
                         <div class="filter-title" data-key="filter-title-types">
                             Types <i class="bi bi-chevron-down"></i>
@@ -132,7 +134,7 @@
                             <input type="checkbox" id="massage"> <label for="massage" data-key="type-massage">Massage chairs (8)</label>
                         </div>
                     </div>
-                    <!-- ціна-->
+                    <!-- prices -->
                     <div class="filter-group">
                         <div class="filter-title" data-key="filter-title-price">
                             Price <i class="bi bi-chevron-down"></i>
@@ -147,7 +149,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- бренди-->
+                    <!-- brends -->
                     <div class="filter-group">
                         <div class="filter-title" data-key="filter-title-brand">
                             Brands <i class="bi bi-chevron-down"></i>
@@ -180,7 +182,7 @@
                             <input type="checkbox" id="joyf"> <label for="joyf">Andrup (5)</label>
                         </div>
                     </div>
-                    <!-- колір-->
+                    <!-- colors -->
                     <div class="filter-group">
                         <div class="filter-title" data-key="filter-title-color">
                             Color <i class="bi bi-chevron-down"></i>
@@ -227,10 +229,10 @@
                     </div>
                 </div>
             </div>
-            <!-- сітка товарів -->
+            <!-- product grid -->
             <div class="col-md-9">
                 <div class="row">
-                    <!-- Product 1 -->
+                    <!-- product 1 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <span class="new fst-italic" data-key="badge-new">New</span>
@@ -254,7 +256,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 2 -->
+                    <!-- product 2 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
@@ -277,7 +279,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 3 -->
+                    <!-- product 3 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <span class="new fst-italic" data-key="badge-new">New</span>
@@ -301,7 +303,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 4 -->
+                    <!-- product 4 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <span class="new fst-italic" data-key="badge-new">New</span>
@@ -325,7 +327,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 5 -->
+                    <!-- product 5 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <span class="new fst-italic" data-key="badge-new">New</span>
@@ -349,7 +351,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 6 -->
+                    <!-- product 6 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <span class="badge-discount">-15%</span>
@@ -373,7 +375,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 7 -->
+                    <!-- product 7 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
@@ -396,7 +398,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 8 -->
+                    <!-- product 8 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
@@ -419,7 +421,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 9 -->
+                    <!-- product 9 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <span class="badge-discount">-9%</span>
@@ -442,7 +444,7 @@
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
-                    <!-- Product 10 -->
+                    <!-- product 10 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <span class="badge-discount">-35%</span>
@@ -465,7 +467,7 @@
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
-                    <!-- Product 11 -->
+                    <!-- product 11 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
@@ -487,7 +489,7 @@
                             <button class="cart-btn"><i class="bi bi-cart"></i></button>
                         </div>
                     </div>
-                    <!-- Product 12 -->
+                    <!-- product 12 -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="product-card">
                             <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
@@ -513,7 +515,7 @@
             </div>
         </div>
     </div>
-        <!-- Пагінація -->
+    <!-- pagination -->
     <div class="pagination">
         <button class="pagination-btn active">1</button>
         <button class="pagination-btn">2</button>
@@ -529,12 +531,13 @@
         <button class="pagination-btn">18</button>
     </div>
     </body>
-    <!-- ====== ПІДВАЛ САЙТУ ====== -->
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid"> <!-- 4 колонки з інформацією -->
+            <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="#" class="logo">Furni.</a> <!-- Логотип -->
+                    <a href="#" class="logo">Furni.</a>
                     <p data-key="foot-desc">The advantage of hiring a workspace with us is that givees you comfortable service.</p>
                 </div>
                 <div class="footer-col">
@@ -565,8 +568,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom"> <!-- Нижня частина підвалу -->
-                <p>&copy; 2026 Furni. All rights reserved.</p> <!-- Авторські права -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Furni. All rights reserved.</p>
                 <div>
                     <a href="#">Terms & Conditions</a>
                     <a href="#">Privacy Policy</a>
@@ -575,6 +578,7 @@
         </div>
     </footer>
 
+    <!-- ===== SCRIPTS ===== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js" defer></script>
     <script src="js/translation-bookshelf.js" defer></script> <!-- Підключення скрипту перекладу -->
